@@ -1,0 +1,78 @@
+{
+  "id": "protokoll-2026-09-08",
+  "typ": "Protokoll",
+  "datum": "2026-09-08",
+  "titel": "Usability-Test & Klärungsgespräch mit Dieter",
+  "meta": {
+    "teilnehmer": ["Dieter", "Bernd (Chat)", "Jan (Usability-Test)"],
+    "anlass": "M1-006 Usability-Test sowie Klärung D-006, Glossar „SystemCheck“, M1-007"
+  },
+  "abschnitte": [
+    {
+      "titel": "Teil 1 — Usability-Test (M1-006)",
+      "typ": "tabelle",
+      "inhalt": {
+        "einleitung": "Getestet wurde der klickbare Fünf-Schritte-Ablauf des Lovable-Prototyps durch Jan.",
+        "spalten": ["#", "Schritt", "Befund", "Typ"],
+        "zeilen": [
+          ["1", "Schritt 2 (SystemCheck)", "Zweiter Teil fehlt: negative Auswirkungen bei Zielerreichung, Gegenmaßnahmen, konkrete Umsetzungssituation je Maßnahme.", "Fachlicher Gap"],
+          ["2", "Schritt 3", "3 separate Eingabefelder nötig: Verständnis des Mitarbeiters zu Aufgabe, Verantwortung, Kompetenzen.", "Neue Anforderung"],
+          ["3", "Schritt 3 / übergreifend", "Felder/Kacheln müssen erkennbar kennzeichnen, wer sie ausfüllt (Mitarbeiter oder Führungskraft).", "UI-Anforderung"],
+          ["4", "Muss-Check-Logik", "Wird ein Muss-Check-Kriterium nicht erfüllt → Abbruch, zurück zum Start des Ablaufs.", "Verhaltenslogik"],
+          ["5", "Muss-Check-Text", "Erläuterungstext final (Variante A): „Wird dieser Muss-Check nicht bestätigt, kann nicht fortgefahren werden – der Ablauf beginnt von vorn.“", "Content (final)"]
+        ]
+      }
+    },
+    {
+      "titel": "D-006 — Abbruchkriterium für den Pilottest",
+      "typ": "fragen_antworten",
+      "inhalt": [
+        { "nr": 5, "frage": "Anhand welcher messbaren Größe wird „Scheitern“ des Pilotbetriebs definiert?", "antwort": "Scheitern liegt vor, wenn (a) niemand das Tool anwendet, (b) es keinen Nutzen bringt, oder (c) das inhaltliche Ziel des Z-AVKK-Ablaufs nicht erreicht wird." },
+        { "nr": 6, "frage": "Welcher Schwellenwert löst den Abbruch aus?", "antwort": "8 Wochen ohne Nutzung bzw. ohne erkennbaren Nutzen." },
+        { "nr": 7, "frage": "Gilt das Kriterium für den gesamten Fünf-Schritte-Ablauf oder pro Einzelschritt?", "antwort": "Für den gesamten Ablauf." },
+        { "nr": 8, "frage": "Wer trifft die Abbruchentscheidung?", "antwort": "Gemeinsam — Dieter und Bernd." }
+      ]
+    },
+    {
+      "titel": "Glossar „SystemCheck“",
+      "typ": "fragen_antworten",
+      "inhalt": [
+        { "nr": 9, "frage": "Ist die zuletzt vorgeschlagene Formulierung final?", "antwort": "Ja, passt so (für die vier bestehenden Leitfragen)." },
+        { "nr": 10, "frage": "Soll der Begriff mit einem Beispiel oder Verweis ergänzt werden?", "antwort": "Ja, Ergänzung um ein Beispiel — wird von Dieter geliefert." }
+      ]
+    },
+    {
+      "titel": "M1-007 — Pilotentscheidung",
+      "typ": "fragen_antworten",
+      "inhalt": [
+        { "nr": 11, "frage": "Nach welchem Zeitraum nach Testende soll die Pilotentscheidung getroffen werden?", "antwort": "Nach Umsetzung der heutigen Testbefunde; danach direkter Übergang in die Pilotumsetzung. Ein weiterer Test kann zwischenzeitlich organisiert werden, darf die Entwicklung aber nicht blockieren." },
+        { "nr": 12, "frage": "Wird die Entscheidung automatisch abgeleitet, oder erfolgt zusätzlich eine qualitative Bewertung?", "antwort": "Automatische Freigabe, sobald die drei Testbefunde umgesetzt sind." },
+        { "nr": 13, "frage": "Wer ist an der Pilotentscheidung beteiligt?", "antwort": "Dieter und Bernd." }
+      ]
+    },
+    {
+      "titel": "Status nach diesem Gespräch",
+      "typ": "tabelle",
+      "inhalt": {
+        "spalten": ["Punkt", "Status", "Kurzbefund"],
+        "zeilen": [
+          ["M1-006 (Usability-Test)", "Abgeschlossen", "Durchgeführt mit Jan, 5 Befunde protokolliert."],
+          ["D-006 (Abbruchkriterium)", "Abgeschlossen", "Vollständig geklärt."],
+          ["Glossar „SystemCheck“", "Teilweise offen", "Formulierung bestätigt; Beispiel von Dieter ausstehend."],
+          ["M1-007 (Pilotentscheidung)", "Ablauf geklärt", "Automatische Freigabe nach Umsetzung der drei Testbefunde."]
+        ]
+      }
+    },
+    {
+      "titel": "Nächste Schritte",
+      "typ": "liste",
+      "inhalt": [
+        "Testbefunde 1–3 spezifizieren und umsetzen.",
+        "Muss-Check-Erläuterungstext (Variante A) im Prototyp umsetzen.",
+        "Beispiel für Glossar „SystemCheck“ von Dieter einholen.",
+        "Nach Umsetzung: Pilotstart automatisch freigegeben.",
+        "Optional, nicht-blockierend: weiteren Test parallel organisieren."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,127 @@
+<!-- ============================================================
+     LeadOS Berichts-Auswahl — Integrationsmodul
+     Ersetzt den bisherigen statischen Log-Bereich der Arbeitsstand-Seite.
+     Einfügen in: claude.ai/code/artifact/4a15e99e-9042-47af-b309-8718560c5605
+     Voraussetzung: Repo LeadOS-Org/leados-reports existiert und ist öffentlich.
+     ============================================================ -->
+<style>
+  #reports-section { font-family: inherit; }
+  #reports-section .filter-bar { display:flex; gap:8px; margin-bottom:12px; flex-wrap:wrap; }
+  #reports-section .filter-btn {
+    padding:4px 12px; border-radius:14px; border:1px solid #D8E0EC;
+    background:#EAF1FC; color:#122A4E; font-size:13px; cursor:pointer;
+  }
+  #reports-section .filter-btn.active { background:#2E6BE0; color:#fff; border-color:#2E6BE0; }
+  #reports-section .report-list { display:flex; flex-direction:column; gap:6px; }
+  #reports-section .report-card {
+    display:flex; align-items:center; gap:10px; text-align:left;
+    padding:10px 14px; border-radius:8px; border:1px solid #D8E0EC;
+    background:#fff; cursor:pointer; width:100%; font-size:14px;
+  }
+  #reports-section .report-card:hover { background:#EAF1FC; }
+  #reports-section .report-typ {
+    font-size:11px; font-weight:700; color:#2E6BE0; background:#EAF1FC;
+    padding:2px 8px; border-radius:10px; white-space:nowrap;
+  }
+  #reports-section .report-datum { color:#5B6B82; font-size:12px; white-space:nowrap; }
+  #reports-section .report-titel { color:#1C2530; font-weight:600; }
+  #reports-section .error { color:#B4740E; font-size:13px; }
+  #report-detail { margin-top:16px; padding:16px; border-radius:8px; background:#F7F9FC; }
+  #report-detail table { width:100%; border-collapse:collapse; margin:8px 0; }
+  #report-detail th { background:#122A4E; color:#fff; text-align:left; padding:6px 8px; font-size:12.5px; }
+  #report-detail td { padding:6px 8px; border-bottom:1px solid #D8E0EC; font-size:13px; vertical-align:top; }
+  #report-detail .qa-item { background:#EAF1FC; border-radius:6px; padding:8px 12px; margin-bottom:6px; }
+  #report-detail .qa-item b { color:#122A4E; }
+</style>
+
+<div id="reports-section">
+  <div class="filter-bar" id="report-filters"></div>
+  <div class="report-list" id="report-list">Lade Berichte…</div>
+  <div id="report-detail"></div>
+</div>
+
+<script>
+(function () {
+  const REPORTS_BASE_URL = "https://raw.githubusercontent.com/LeadOS-Org/leados-reports/main/";
+  let allReports = [];
+  let activeFilter = "Alle";
+
+  async function loadIndex() {
+    const res = await fetch(REPORTS_BASE_URL + "index.json");
+    if (!res.ok) throw new Error("Index nicht erreichbar (" + res.status + ")");
+    const data = await res.json();
+    return data.reports.sort((a, b) => b.datum.localeCompare(a.datum));
+  }
+
+  async function loadReport(pfad) {
+    const res = await fetch(REPORTS_BASE_URL + pfad);
+    if (!res.ok) throw new Error("Bericht nicht erreichbar (" + res.status + ")");
+    return res.json();
+  }
+
+  function renderFilters() {
+    const types = ["Alle", ...new Set(allReports.map(r => r.typ))];
+    const bar = document.getElementById("report-filters");
+    bar.innerHTML = "";
+    types.forEach(t => {
+      const btn = document.createElement("button");
+      btn.className = "filter-btn" + (t === activeFilter ? " active" : "");
+      btn.textContent = t;
+      btn.onclick = () => { activeFilter = t; renderFilters(); renderList(); };
+      bar.appendChild(btn);
+    });
+  }
+
+  function renderList() {
+    const container = document.getElementById("report-list");
+    container.innerHTML = "";
+    const visible = activeFilter === "Alle" ? allReports : allReports.filter(r => r.typ === activeFilter);
+    if (visible.length === 0) { container.innerHTML = "<p>Keine Berichte in dieser Kategorie.</p>"; return; }
+    visible.forEach(r => {
+      const card = document.createElement("button");
+      card.className = "report-card";
+      card.innerHTML = `<span class="report-typ">${r.typ}</span>
+                         <span class="report-datum">${r.datum}</span>
+                         <span class="report-titel">${r.titel}</span>`;
+      card.onclick = () => loadReport(r.pfad).then(renderDetail).catch(showError);
+      container.appendChild(card);
+    });
+  }
+
+  function renderDetail(report) {
+    const el = document.getElementById("report-detail");
+    let html = `<h3>${report.titel}</h3><p style="color:#5B6B82;font-size:13px;">${report.datum}`;
+    if (report.meta && report.meta.teilnehmer) html += ` · ${report.meta.teilnehmer.join(", ")}`;
+    html += `</p>`;
+    (report.abschnitte || []).forEach(a => {
+      html += `<h4>${a.titel}</h4>`;
+      if (a.typ === "text") {
+        html += `<p>${a.inhalt}</p>`;
+      } else if (a.typ === "tabelle") {
+        if (a.inhalt.einleitung) html += `<p>${a.inhalt.einleitung}</p>`;
+        html += `<table><thead><tr>${a.inhalt.spalten.map(s => `<th>${s}</th>`).join("")}</tr></thead><tbody>`;
+        a.inhalt.zeilen.forEach(z => { html += `<tr>${z.map(c => `<td>${c}</td>`).join("")}</tr>`; });
+        html += `</tbody></table>`;
+      } else if (a.typ === "fragen_antworten") {
+        a.inhalt.forEach(qa => {
+          html += `<div class="qa-item"><b>F${qa.nr}:</b> ${qa.frage}<br><b>Antwort:</b> ${qa.antwort}</div>`;
+        });
+      } else if (a.typ === "liste") {
+        html += `<ul>${a.inhalt.map(i => `<li>${i}</li>`).join("")}</ul>`;
+      }
+    });
+    el.innerHTML = html;
+  }
+
+  function showError(err) {
+    document.getElementById("report-list").innerHTML =
+      `<p class="error">Berichte konnten nicht geladen werden: ${err.message}</p>`;
+  }
+
+  loadIndex().then(reports => {
+    allReports = reports;
+    renderFilters();
+    renderList();
+  }).catch(showError);
+})();
+</script>

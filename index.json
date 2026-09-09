@@ -1,0 +1,20 @@
+{
+  "$schema": "./schema/index.schema.json",
+  "reports": [
+    {
+      "id": "protokoll-2026-09-08",
+      "typ": "Protokoll",
+      "datum": "2026-09-08",
+      "titel": "Usability-Test & Klärungsgespräch mit Dieter",
+      "pfad": "reports/protokoll-2026-09-08.json"
+    },
+    {
+      "id": "abschlussbericht-2026-08-31",
+      "typ": "Abschlussbericht",
+      "datum": "2026-08-31",
+      "titel": "Monatsabschluss M0/M1",
+      "pfad": "reports/abschlussbericht-2026-08-31.json"
+    }
+  ]
+}
+

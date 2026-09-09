@@ -1,0 +1,37 @@
+{
+  "id": "abschlussbericht-2026-08-31",
+  "typ": "Abschlussbericht",
+  "datum": "2026-08-31",
+  "titel": "Monatsabschluss M0/M1 – Governance & Repository-Hygiene",
+  "meta": {
+    "teilnehmer": ["Bernd (Chat)"],
+    "anlass": "Priorisierte Arbeit ohne Dieter, während dessen Usability-Test lief"
+  },
+  "abschnitte": [
+    {
+      "titel": "Kurzfassung",
+      "typ": "text",
+      "inhalt": "Wichtigster Punkt – SSH-Commit-Signierung als Voraussetzung für jeden Push auf main – wurde für TDF vollständig eingerichtet und verifiziert. Zusätzlich wurden zwei ungeplante Ergebnisse erzielt: Schließung einer Admin-Bypass-Lücke der Pull-Request-Pflicht in beiden Standards-Repositories, sowie Behebung zweier fälschlich als offen/nicht-abgeschlossen geführter Punkte in leados-design-foundation (PR #6, Issue #2)."
+    },
+    {
+      "titel": "Ergebnisse im Überblick",
+      "typ": "tabelle",
+      "inhalt": {
+        "spalten": ["Punkt", "Status", "Kurzbefund"],
+        "zeilen": [
+          ["SSH-Commit-Signierung (TDF)", "Abgeschlossen", "Verified-Badge per Test-Push bestätigt."],
+          ["SSH-Commit-Signierung (ADR)", "Vorbereitet", "Technisch eingerichtet, Nachweis via PR noch ausstehend."],
+          ["Claude GitHub App (bmarnau-standards)", "Abgeschlossen", "Organisationsweit installiert, Funktionstest erfolgreich."],
+          ["Admin-Bypass PR-Pflicht", "Geschlossen", "„Do not allow bypassing“ in beiden Repos aktiviert."],
+          ["PR #6 (leados-design-foundation)", "Nachgeholt", "War trotz grüner Checks nie gemergt – jetzt gemergt."],
+          ["Issue #2 (M1-001)", "Nachgeholt", "Fälschlich offen seit 26.08. – geschlossen."]
+        ]
+      }
+    },
+    {
+      "titel": "Lehre für künftige Statusprüfungen",
+      "typ": "text",
+      "inhalt": "Ein als „abgeschlossen“ dokumentierter Meilenstein ersetzt keine Prüfung des tatsächlichen Repository-Zustands – dokumentierter und tatsächlicher Stand können auseinanderlaufen. Arbeitsregel: vor größeren Abschlüssen den Repository-/Dokumentzustand stichprobenartig gegenprüfen."
+    }
+  ]
+}
