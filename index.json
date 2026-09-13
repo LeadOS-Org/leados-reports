@@ -2,6 +2,13 @@
   "$schema": "./schema/index.schema.json",
   "reports": [
     {
+      "id": "2026-09-11-z-avkk-systemcheck-review",
+      "typ": "Protokoll",
+      "datum": "2026-09-11",
+      "titel": "Z-AVKK- und SystemCheck-Abstimmung: Dokumentenanalyse und Website-Abgleich",
+      "pfad": "reports/2026-09-11-z-avkk-systemcheck-review.json"
+    },
+    {
       "id": "protokoll-2026-09-08",
       "typ": "Protokoll",
       "datum": "2026-09-08",

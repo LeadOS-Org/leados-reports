@@ -1,0 +1,44 @@
+{
+  "id": "2026-09-11-z-avkk-systemcheck-review",
+  "typ": "Protokoll",
+  "datum": "2026-09-11",
+  "titel": "Z-AVKK- und SystemCheck-Abstimmung: Dokumentenanalyse und Website-Abgleich",
+  "meta": {
+    "teilnehmer": ["Bernd (Chat)"],
+    "anlass": "Abstimmungsvorbereitung mit Dieter: Prüfung des Z-AVKK-Modells und der SystemCheck-Struktur anhand der Projektunterlagen und der Institutswebsite."
+  },
+  "abschnitte": [
+    {
+      "titel": "Zusammenfassung",
+      "typ": "text",
+      "inhalt": "Zur Abstimmung mit Dieter wurde das Z-AVKK-Modell und die SystemCheck-Struktur anhand der Projektunterlagen und der Institutswebsite geprüft. Zwei Korrekturen und eine offene Diskrepanz wurden identifiziert."
+    },
+    {
+      "titel": "Befunde",
+      "typ": "liste",
+      "inhalt": [
+        "Z-AVKK-Korrektur 1: Der Pilot ist laut D-001 bewusst auf die Beziehung Inhaber-Mitarbeiter begrenzt, nicht die allgemeine Führungskraft-Ebene (spätere Phase).",
+        "Z-AVKK-Korrektur 2: Laut D-003 werden alle fünf Schritte gemeinsam von Inhaber und Mitarbeiter durchlaufen (kein Alleingang), keine Aufteilung nach Element.",
+        "Z-AVKK-Struktur bestätigt: Ziel erweitert die Basis AVKK (Aufgabe, Verantwortung, Kompetenz, Konsequenz); die vier Bruchstellen des Führungskreislaufs laut D-002 sind Ziel, Aufgabe, Verantwortung, Kompetenzen - Konsequenzen ist das Ergebnis danach, keine eigene Bruchstelle.",
+        "SystemCheck-Zusammenhang: SystemCheck ist ein vorgeschaltetes Gate speziell vor dem Element Ziel (D-002, Glossar-Definition 'Entscheidungsinstrument vor Zielfestlegung').",
+        "SystemCheck-Diskrepanz entdeckt: Drei unterschiedliche Formulierungen im Umlauf - (1) bisherige Projekt-/Glossarformulierung (Gegenwartswert/Übergangsstrategie/Zielrisiken/Risikominderung), (2) von Dieter hochgeladenes Bild (Vier-Felder-Modell mit Ja/Nein-Entscheidungsschleife 'Risiken & Ängste aufgelöst?'), (3) aktueller Live-Text der Institutswebsite (hanseatisches-institut.de/systemcheck-veraenderungen-unternehmen, Stand 26.04.2026): vier lineare Fragen - 'Was ist das Gute am Jetzt?' (Vorteile der Gegenwart), 'Was muss getan werden, damit diese Vorteile erhalten bleiben?' (Übergangsgestaltung), 'Welche negativen Konsequenzen kann das Ziel haben?' (Risiken nach der Zielerreichung), 'Was muss getan werden, damit diese Konsequenzen nicht eintreten?' (Lösungsentwicklung).",
+        "Website-Fassung liegt inhaltlich näher an der bisherigen Projektformulierung als an Dieters Bild - Dieters Glossar-Bestätigung vom 09.09. könnte auf einem Missverständnis beruhen.",
+        "Klärungsmail an Dieter formuliert (vier Fragen: welche Fassung maßgeblich ist, ob Projektformulierung passt, ob Frage 3+4 der Website bereits den Nacharbeitspunkt Teil 2 abdeckt, ob die Glossar-Bestätigung sich auf die Website-Fassung bezog)."
+      ]
+    },
+    {
+      "titel": "Offene Punkte",
+      "typ": "liste",
+      "inhalt": [
+        "Dieters Antwort zur maßgeblichen SystemCheck-Fassung steht aus.",
+        "Je nach Antwort: Lovable-Nacharbeitsprompt (SystemCheck Teil 2) ggf. anzupassen, bevor er an Lovable geht.",
+        "Glossar-Formulierung 'SystemCheck' ggf. neu zu bestätigen."
+      ]
+    },
+    {
+      "titel": "Bezüge",
+      "typ": "liste",
+      "inhalt": ["D-001", "D-002", "D-003", "M1-006", "M1-007", "glossar-systemcheck"]
+    }
+  ]
+}
