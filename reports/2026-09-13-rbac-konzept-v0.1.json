@@ -1,0 +1,48 @@
+{
+  "id": "2026-09-13-rbac-konzept-v0-1",
+  "typ": "Tagesbericht",
+  "datum": "2026-09-13",
+  "titel": "RBAC-Konzept LeadOS v0.1 (Post-Pilot-Phase)",
+  "meta": {
+    "teilnehmer": ["Bernd (Chat)"],
+    "anlass": "Erster Entwurf eines Rollen-/Zugriffskonzepts für die Post-Pilot-Phase, unabhängig vom laufenden Piloten (D-009)."
+  },
+  "abschnitte": [
+    {
+      "titel": "Zusammenfassung",
+      "typ": "text",
+      "inhalt": "Erster Entwurf eines Rollen-/Zugriffskonzepts für die Post-Pilot-Phase: ein einheitliches 3-Rollen-Modell (Admin, Führungskraft, Mitarbeiter) auf Supabase-Basis, inklusive Multi-Tenancy (mehrere Firmen). Die meisten Kernfragen sind geklärt, einige rechtliche/prozessuale Punkte gehen an Dieter."
+    },
+    {
+      "titel": "Befunde",
+      "typ": "liste",
+      "inhalt": [
+        "Einheitliches Rollenmodell: Admin (Bernd, Dieter, firmenübergreifend), Führungskraft (FK), Mitarbeiter (MA) — kein separates Rollensystem für Administration vs. Anwendung.",
+        "FK↔MA: eine Führungskraft kann mehrere Mitarbeiter haben (1:n), ein Mitarbeiter hat genau eine Führungskraft. Zuordnung wird im Face-to-Face eingerichtet. Gemeinsamer, symmetrischer Zugriff auf die Aufgaben-Daten (volles Lesen/Schreiben für beide).",
+        "Multi-Tenancy: LeadOS soll mehrere Firmen getrennt voneinander unterstützen (firma_id im Datenmodell, RLS-Policy-Umsetzung noch ausstehend). Admin ist ausschließlich firmenübergreifend, kein firmenlokaler Admin.",
+        "Authentifizierung: Supabase Auth, E-Mail+Passwort, Supabase-Standard-Passwortrichtlinie, automatische Abmeldung bei Inaktivität (Default + pro Konto einstellbar durch Admin), MFA als Option (Supabase MFA), sowohl Self-Signup als auch Einladung möglich, E-Mail-Bestätigung UND direkte Bestätigung (für Testkonten) möglich, kein Brute-Force-Schutz vorerst.",
+        "Löschkonzept: automatisches Archiv mit generationsbegrenzter Aufbewahrung bei Löschung; Admin darf grundsätzlich löschen (FK/MA-Löschrechte offen). DSGVO-Konformität als übergreifende Anforderung: Löschung, Auskunftsfähigkeit (Art. 15) und Nutzer-Einwilligung müssen abgedeckt werden.",
+        "Sicherheitsrisiko identifiziert (R6): Supabase service_role-Schlüssel umgeht Row-Level-Security vollständig — muss ausschließlich serverseitig verwendet werden.",
+        "Backlog-Merkposten (nicht Teil dieses Konzepts): Datensicherung/Backup, PDF-Export, Datenschutzerklärung und Impressum inkl. Supabase-Auftragsverarbeitungs-Hinweise."
+      ]
+    },
+    {
+      "titel": "Offene Punkte",
+      "typ": "liste",
+      "inhalt": [
+        "Einschränkung der Selbstregistrierung (Domain-Beschränkung, manuelle Freigabe, Rollenbegrenzung?) — Frage an Dieter.",
+        "Konkrete DSGVO-Aufbewahrungsfrist, verantwortliche Stelle, Form/Zeitpunkt der Nutzer-Einwilligung — Frage an Dieter.",
+        "Offboarding-Prozess bei Austritt eines Mitarbeiters oder FK-Wechsel — Frage an Dieter.",
+        "Löschrechte für FK und/oder MA (bislang nur Admin entschieden) — Frage an Dieter.",
+        "Ob ein Audit-Log für die gemeinsam bearbeiteten Aufgaben-Daten (System B) eingeführt werden soll — Frage an Dieter.",
+        "Ob eine Führungskraft selbst Rollen ändern darf (z. B. MA → FK), zusätzlich zu Admin — Frage an Dieter.",
+        "RLS-Policy-Umsetzung für firma_id (Multi-Tenancy-Isolation, R7) technisch noch auszuarbeiten."
+      ]
+    },
+    {
+      "titel": "Bezüge",
+      "typ": "liste",
+      "inhalt": ["RBAC-Konzept-LeadOS_v0.1", "D-009", "Supabase"]
+    }
+  ]
+}

@@ -2,6 +2,13 @@
   "$schema": "./schema/index.schema.json",
   "reports": [
     {
+      "id": "2026-09-13-rbac-konzept-v0-1",
+      "typ": "Tagesbericht",
+      "datum": "2026-09-13",
+      "titel": "RBAC-Konzept LeadOS v0.1 (Post-Pilot-Phase)",
+      "pfad": "reports/2026-09-13-rbac-konzept-v0.1.json"
+    },
+    {
       "id": "2026-09-13-m1006-nacharbeit-abgeschlossen",
       "typ": "Tagesbericht",
       "datum": "2026-09-13",
