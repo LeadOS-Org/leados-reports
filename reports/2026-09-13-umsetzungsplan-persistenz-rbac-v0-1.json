@@ -1,0 +1,43 @@
+{
+  "id": "2026-09-13-umsetzungsplan-persistenz-rbac-v0-1",
+  "typ": "Tagesbericht",
+  "datum": "2026-09-13",
+  "titel": "Umsetzungsplan Persistenz & RBAC v0.1 (Post-Pilot-Phase)",
+  "meta": {
+    "teilnehmer": ["Bernd (Chat)"],
+    "anlass": "Sechs-Sprint-Plan, der Datenpersistenz für den Fünf-Schritte-Ablauf und das RBAC-Konzept in eine verzahnte Reihenfolge bringt."
+  },
+  "abschnitte": [
+    {
+      "titel": "Zusammenfassung",
+      "typ": "text",
+      "inhalt": "Sechs-Sprint-Plan, der die vollständige Datenpersistenz für den Fünf-Schritte-Ablauf und das RBAC-Konzept (Rollen, RLS, DSGVO, Komfort, Multi-Tenancy) in eine geordnete, verzahnte Reihenfolge bringt, inklusive grobem Lovable-Prompt-Scope pro Sprint."
+    },
+    {
+      "titel": "Befunde",
+      "typ": "liste",
+      "inhalt": [
+        "Sprint 1 - Auth-Fundament: Supabase Auth, users/firmen-Tabellen, Admin-Rollen für Bernd/Dieter.",
+        "Sprint 2 - Datenmodell fünf Schritte: vollständige Migration von sessionStorage auf Supabase für alle Inhalte (Ziel/Aufgabe/Verantwortung/Kompetenzen/Konsequenzen, SystemCheck Teil 1+2, MA-Sicht Schritt 3, Schritt 4/5).",
+        "Sprint 3 - RLS-Zugriffsschutz: Policies für MA-Eigensicht, FK-Aggregatsicht, firma_id-Isolation (R7), service_role nur serverseitig (R6). Bewusst eng mit Sprint 2 verzahnt, um keine ungeschützte Datenperiode entstehen zu lassen.",
+        "Sprint 4 - DSGVO-Mechanik: Archiv mit generationsbegrenzter Aufbewahrung, Auskunftsfunktion (Art. 15 DSGVO), Einwilligungsmechanismus bei Registrierung.",
+        "Sprint 5 - Komfort und Sicherheit: MFA optional (Supabase MFA), Session-Timeout (Default + pro Konto).",
+        "Sprint 6 - Multi-Tenancy-Härtung: Firmen-Onboarding-Flow, Isolationstest mit zwei Testfirmen, optionales Audit-Log.",
+        "Keine der offenen Dieter-Fragen blockiert den Start eines Sprints - jeder kann mit dokumentierter Annahme beginnen und bei Antwort nachgeschärft werden (Vorgehen bereits beim SystemCheck-Feldlabel erfolgreich praktiziert)."
+      ]
+    },
+    {
+      "titel": "Offene Punkte",
+      "typ": "liste",
+      "inhalt": [
+        "Bestätigung der Reihenfolge, insbesondere ob Sprint 2 und 3 im selben Deploy-Fenster laufen müssen.",
+        "Fünf Dieter-Fragen bleiben sprintweise zugeordnet offen (siehe Dokument Abschnitt 4): Registrierungs-Einschränkung (Sprint 1), Löschrechte FK/MA (Sprint 3), DSGVO-Fristen/Offboarding (Sprint 4), Rollenwechsel durch FK (Sprint 5), Audit-Log (Sprint 6, nicht blockierend)."
+      ]
+    },
+    {
+      "titel": "Bezüge",
+      "typ": "liste",
+      "inhalt": ["RBAC-Konzept-LeadOS_v0.1", "D-009", "Supabase"]
+    }
+  ]
+}
