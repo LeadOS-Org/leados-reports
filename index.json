@@ -2,6 +2,13 @@
   "$schema": "./schema/index.schema.json",
   "reports": [
     {
+      "id": "2026-09-13-m1006-nacharbeit-abgeschlossen",
+      "typ": "Tagesbericht",
+      "datum": "2026-09-13",
+      "titel": "Nacharbeit M1-006 vollständig umgesetzt und geprüft – M1-007 steht an",
+      "pfad": "reports/2026-09-13-m1006-nacharbeit-abgeschlossen.json"
+    },
+    {
       "id": "2026-09-11-z-avkk-systemcheck-review",
       "typ": "Protokoll",
       "datum": "2026-09-11",

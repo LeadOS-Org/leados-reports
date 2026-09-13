@@ -1,0 +1,44 @@
+{
+  "id": "2026-09-13-m1006-nacharbeit-abgeschlossen",
+  "typ": "Tagesbericht",
+  "datum": "2026-09-13",
+  "titel": "Nacharbeit M1-006 vollständig umgesetzt und geprüft – M1-007 steht an",
+  "meta": {
+    "teilnehmer": ["Bernd (Chat)"],
+    "anlass": "Abschlussprüfung der Nacharbeit zu M1-006 (Usability-Test vom 08.09.) vor Übergang in die Pilotfreigabe M1-007."
+  },
+  "abschnitte": [
+    {
+      "titel": "Zusammenfassung",
+      "typ": "text",
+      "inhalt": "Alle vier Befunde aus dem Usability-Test vom 08.09. (Jan) sind in Lovable umgesetzt und der vollständige Durchlauf Schritt 1–5 wurde fehlerfrei getestet. Damit ist die letzte fachliche Hürde vor der Pilotfreigabe (M1-007) genommen."
+    },
+    {
+      "titel": "Befunde",
+      "typ": "liste",
+      "inhalt": [
+        "SystemCheck Teil 2 (Schritt 2): wiederholbare Blöcke pro Zielrisiko (Zielrisiko, negative Auswirkung, Gegenmaßnahme, Umsetzungssituation); erscheinen automatisch in der Aktionsplan-Übersicht ('Teil 2: Zielrisiken absichern'). Speicherung weiterhin nur innerhalb der Session (D-009).",
+        "Drei MA-Felder (Schritt 3): neue Karte 'Sicht des Mitarbeiters' mit getrennten Feldern für Aufgabe, Verantwortung, Kompetenzen; bestehende FK-Felder und Übernahme aus Schritt 1 unverändert.",
+        "Rollenkennzeichnung: jede Kachel in allen fünf Schritten trägt ein Badge 'FK – Führungskraft' oder 'MA – Mitarbeiter' (Navy/Petrol, bewusst ohne die vier Statusfarben).",
+        "Muss-Check-Text in Schritt 1–3 exakt: 'Wird dieser Muss-Check nicht bestätigt, kann nicht fortgefahren werden – der Ablauf beginnt von vorn.' Logik unverändert (Rücksprung zum Start).",
+        "Vollständiger Browsertest Schritt 1–5 fehlerfrei: Gates sperren korrekt, Ziel/Aufgabe erscheinen in Schritt 2 und 3, SystemCheck-Eingaben in der Übersicht, keine Konsolenfehler.",
+        "Bernd hat Dieter formell über den Abschluss informiert; M1-007 (Pilotfreigabe) erfolgt laut Beschluss vom 09.09. automatisch, wird aber gemeinsam von Dieter und Bernd offiziell bestätigt."
+      ]
+    },
+    {
+      "titel": "Offene Punkte",
+      "typ": "liste",
+      "inhalt": [
+        "Formelle Bestätigung von Dieter zu M1-007 steht aus.",
+        "SystemCheck-Glossar-Klärung (Website- vs. Projektformulierung) läuft unabhängig weiter, kein Stopper.",
+        "Beispiel für das SystemCheck-Glossar von Dieter weiterhin ausstehend.",
+        "Gesammelte offene Fragen für den nächsten gemeinsamen Termin (Rollentrennung Inhaber/Geschäftsführer, verknüpfte Artefakte, HTML-Mockup-Verhältnis, Z-AVKK.md-Abgleich) weiterhin offen."
+      ]
+    },
+    {
+      "titel": "Bezüge",
+      "typ": "liste",
+      "inhalt": ["M1-006", "M1-007", "D-009", "Lovable_Prompt_M1006_Nacharbeit"]
+    }
+  ]
+}
