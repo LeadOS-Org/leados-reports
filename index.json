@@ -2,6 +2,13 @@
   "$schema": "./schema/index.schema.json",
   "reports": [
     {
+      "id": "2026-09-17-abschlusspruefung-und-lovable-umsetzung",
+      "typ": "Tagesbericht",
+      "datum": "2026-09-17",
+      "titel": "Abschlussprüfung und Lovable-Umsetzung (L-1–L-4) – Auftragssammlung 15.09. abgeschlossen",
+      "pfad": "reports/2026-09-17-abschlusspruefung-und-lovable-umsetzung.json"
+    },
+    {
       "id": "2026-09-15-terminologie-und-muss-check-revision",
       "typ": "Tagesbericht",
       "datum": "2026-09-15",
