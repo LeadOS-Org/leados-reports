@@ -1,0 +1,27 @@
+{
+  "id": "2026-09-15-terminologie-und-muss-check-revision",
+  "typ": "Tagesbericht",
+  "datum": "2026-09-15",
+  "titel": "Terminologie-, d009- und Muss-Check-Revision – zehn Aufträge konsolidiert",
+  "meta": {
+    "teilnehmer": ["Bernd (Chat)"],
+    "anlass": "Tagesabschluss 15.09.2026: Ergebnisse der heutigen Session in die üblichen Projektartefakte übernommen."
+  },
+  "abschnitte": [
+    {
+      "titel": "Zusammenfassung",
+      "typ": "text",
+      "inhalt": "Terminologie-Vereinheitlichung auf \"Unternehmer\" entschieden; d009 revidiert (KI-Vorschläge im SystemCheck erlaubt, einfacher LLM-Aufruf); Muss-Check-Verhalten revidiert (Hinweis statt Reset, ersetzt Befund 4 aus M1-006); D-009-Kurzbezeichnungen an UI-Wortlaut angeglichen; fünf weitere UI-Änderungswünsche konzipiert; alle zehn resultierenden Aufträge für Claude Code und Lovable konsolidiert und ins Repo übernommen."
+    },
+    {
+      "titel": "Offene Punkte",
+      "typ": "liste",
+      "inhalt": ["Keine offenen technischen Blocker aus heutiger Session."]
+    },
+    {
+      "titel": "Bezüge",
+      "typ": "liste",
+      "inhalt": ["D-009", "M1-006", "M1-007", "LeadOS_Auftragssammlung_2026-09-15.md (leados-design-foundation/docs/)"]
+    }
+  ]
+}

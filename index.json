@@ -2,6 +2,13 @@
   "$schema": "./schema/index.schema.json",
   "reports": [
     {
+      "id": "2026-09-15-terminologie-und-muss-check-revision",
+      "typ": "Tagesbericht",
+      "datum": "2026-09-15",
+      "titel": "Terminologie-, d009- und Muss-Check-Revision – zehn Aufträge konsolidiert",
+      "pfad": "reports/2026-09-15-terminologie-und-muss-check-revision.json"
+    },
+    {
       "id": "2026-09-13-umsetzungsplan-persistenz-rbac-v0-1",
       "typ": "Tagesbericht",
       "datum": "2026-09-13",
