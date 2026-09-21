@@ -1,0 +1,27 @@
+{
+  "id": "2026-09-21-sprint-1-5-abschluss-und-navigation",
+  "typ": "Tagesbericht",
+  "datum": "2026-09-21",
+  "titel": "Sprint 1.5 (Epic G) vollständig abgeschlossen — Navigationslücke als neuer Diskussionspunkt",
+  "meta": {
+    "teilnehmer": ["Bernd (Chat)"],
+    "anlass": "Seit dem letzten Protokoll (18.09.) wurde Sprint 1.5 (Epic G, Z-AVKK-Liste) vollständig abgeschlossen, live verifiziert, und im Anschluss eine AQGS-Hygiene-Diagnose durchgeführt und behoben."
+  },
+  "abschnitte": [
+    {
+      "titel": "Zusammenfassung",
+      "typ": "text",
+      "inhalt": "Sprint 1.5 (Epic G) vollständig abgeschlossen: G1–G7, G10 umgesetzt und verifiziert (Zwei-Ebenen-Struktur, Button \"weitere Aufgabe\", Z-AVKK-Liste mit allen zwölf Feldern, KI-Prüfung als Arbeitsversion, Kapazitätsrechnung, Erledigt-Kennzeichen, Bestätigt-FK/MA), dazu Layout- und Farbverfeinerungen (sticky Spalte, Kompaktansicht, dezente Farbgebung, mitwachsende Textfelder). Live-Verifikation auf leados-design-foundation.lovable.app bestätigt: Terminologie \"Unternehmer\", G2-Button und Z-AVKK-Liste funktionieren vollständig. Neuer Diskussionspunkt für Dieter: Navigation zwischen Z-AVKK-Liste und Fünf-Schritte-Ablauf fehlt noch (bewusst zurückgestellt), Vorschläge liegen vor. Im Anschluss AQGS-Hygiene-Diagnose (siehe Berichte vom selben Tag) durchgeführt: CI-Rot behoben, Branch-Schutz eingerichtet, E2E-Tests für G3/G5 ergänzt, Standards-Familie (D-011/ADR-0006) dokumentiert und alle drei zugehörigen PRs gemergt. Keine offenen technischen Blocker."
+    },
+    {
+      "titel": "Neuer Diskussionspunkt: Navigation",
+      "typ": "text",
+      "inhalt": "Die Z-AVKK-Liste (dauerhafte Aufgabenliste) und der Fünf-Schritte-Ablauf (Übergabe-Dialog je Aufgabe) sind aktuell nicht miteinander verlinkt — bewusst zurückgestellt, um Sprint 1.5 nicht zu vergrößern. Vorschläge liegen vor, Diskussion mit Dieter aussteht. Damit zusammen hängt eine zweite offene Frage: Schritt 5 (Überblick/Neustart) muss im Licht der jetzt dauerhaften Z-AVKK-Liste neu eingeordnet werden, da \"Überblick\" und \"Neustart\" ihre ursprüngliche Bedeutung aus dem Session-only-Piloten teilweise verlieren."
+    },
+    {
+      "titel": "Bezüge",
+      "typ": "liste",
+      "inhalt": ["G1", "G2", "G3", "G5", "G10", "D-011", "ADR-0006", "2026-09-21-aqds-hygiene-und-standardfamilie", "2026-09-21-umsetzung-nach-aqds-hygiene"]
+    }
+  ]
+}
