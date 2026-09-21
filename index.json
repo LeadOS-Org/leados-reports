@@ -2,6 +2,13 @@
   "$schema": "./schema/index.schema.json",
   "reports": [
     {
+      "id": "2026-09-21-umsetzung-nach-aqds-hygiene",
+      "typ": "Tagesbericht",
+      "datum": "2026-09-21",
+      "titel": "Umsetzung nach AQGS-Hygiene-Diagnose: CI grün, Branch-Schutz, E2E-Tests, Doku-Sync",
+      "pfad": "reports/2026-09-21-umsetzung-nach-aqds-hygiene.json"
+    },
+    {
       "id": "2026-09-21-aqds-hygiene-und-standardfamilie",
       "typ": "Tagesbericht",
       "datum": "2026-09-21",

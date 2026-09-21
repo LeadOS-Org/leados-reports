@@ -1,0 +1,44 @@
+{
+  "id": "2026-09-21-umsetzung-nach-aqds-hygiene",
+  "typ": "Tagesbericht",
+  "datum": "2026-09-21",
+  "titel": "Umsetzung nach AQGS-Hygiene-Diagnose: CI grün, Branch-Schutz, E2E-Tests, Doku-Sync",
+  "meta": {
+    "teilnehmer": ["Bernd (Chat)"],
+    "anlass": "Fortsetzung der Diagnose-Session vom selben Tag (siehe 2026-09-21-aqds-hygiene-und-standardfamilie): Bernd beauftragte die Behebung aller dort gefundenen Abweichungen, Schritt für Schritt."
+  },
+  "abschnitte": [
+    {
+      "titel": "Zusammenfassung",
+      "typ": "text",
+      "inhalt": "Alle in der Vormittags-Diagnose gefundenen Abweichungen wurden noch am selben Tag behoben: (1) CI-Rot auf leados-design-foundation/main behoben (PR #11) - dabei traten waehrend der Arbeit zwei echte Merge-Konflikte mit zeitgleichen Lovable-Direct-Pushes auf main auf (Lovable arbeitete parallel am Layout), beide sauber per Git-Merge aufgeloest, dazwischen ein CRLF-Zeilenenden-Bug identifiziert und behoben, der lokale Lint-Laeufe faelschlich als 'gruen' zeigte, obwohl CI rot blieb. (2) Minimaler Branch-Schutz (kein Force-Push, keine Loeschung, kein PR-Zwang) auf main in allen drei LeadOS-Org-Repos eingerichtet. (3) Neue Playwright-E2E-Tests fuer G3 (Z-AVKK-Liste) und G5 (KI-Pruefung) geschrieben und in echter CI verifiziert (PR #12). (4) Verwaister, divergierter PR #1 in leados-arbeitsstand geschlossen. (5) Veraltete README-Statustexte in leados-design-foundation und der Stand-Zeitstempel in leados-arbeitsstand aktualisiert; die Phasenleiste (Meilenstein-Erzaehlung) bewusst unangetastet gelassen, da das eine fachliche Einschaetzung fuer Dieter/Bernd ist. (6) Die zuvor als veraltet befundene Lovable-Live-Vorschau hat sich von selbst geklaert (Lovable war zum Diagnosezeitpunkt noch aktiv) - Live-Check bestaetigt: Z-AVKK-Liste und KI-Pruefung funktionieren vollstaendig in Produktion, die KI-Pruefung liefert eine vollstaendige, regelkonforme Analyse (Steuerbarkeit, Verantwortung als Gefuehl, vier Entscheidungsoptionen, Systemgesetzebene-Hinweis, kein Score)."
+    },
+    {
+      "titel": "Erledigte Punkte",
+      "typ": "liste",
+      "inhalt": [
+        "CI-Rot auf leados-design-foundation/main behoben (PR #11, inkl. zweier Merge-Konflikte mit parallelen Lovable-Pushes und eines CRLF-Bugs) - main ist gruen.",
+        "Minimaler Branch-Schutz (kein Force-Push/Loeschung, kein PR-Zwang) auf main in allen drei LeadOS-Org-Repos eingerichtet.",
+        "Neue E2E-Tests fuer G3 (Z-AVKK-Liste laedt mit Beispieldaten, KPI-Kacheln, Kompaktansicht-Umschalter) und G5 (KI-Pruefung-Button, Ladezustand, deterministischer Fallback ohne API-Key) - in CI verifiziert, PR #12 gemergt.",
+        "Verwaister PR #1 (docs: add README) in leados-arbeitsstand geschlossen, Branch geloescht - Inhalt war durch spaeteren main-Stand ersetzt.",
+        "README-Status in leados-design-foundation aktualisiert (PR #13): Fuenf-Schritte-Ablauf vollstaendig klickbar statt '3/5', Sprint-1.5-Stand ergaenzt.",
+        "Stand-Zeitstempel in leados-arbeitsstand aktualisiert (PR #3): von 09.09. auf 21.09.2026.",
+        "Lovable-Live-Vorschau (leados-design-foundation.lovable.app) live geprueft: Z-AVKK-Liste und KI-Pruefung funktionieren vollstaendig, KI-Pruefung liefert echte regelkonforme Analyse."
+      ]
+    },
+    {
+      "titel": "Offene Punkte",
+      "typ": "liste",
+      "inhalt": [
+        "Bash-Berechtigungsregel fuer 'gh pr merge'/'git merge' noch nicht dauerhaft gespeichert (Claude-Code-Auto-Mode verweigert Self-Modification von settings.local.json auch mit Chat-Zustimmung) - Bernd muesste die Datei selbst anlegen oder pro Aktion in den Standard-Modus wechseln.",
+        "Unsignierte Alt-Commits auf leados-design-foundation/main bleiben unveraendert (rueckwirkend nicht sinnvoll korrigierbar).",
+        "Phasenleiste ('Wo wir stehen') in leados-arbeitsstand bewusst nicht inhaltlich aktualisiert - fachliche Einschaetzung, keine reine Doku-Nachfuehrung."
+      ]
+    },
+    {
+      "titel": "Bezüge",
+      "typ": "liste",
+      "inhalt": ["2026-09-21-aqds-hygiene-und-standardfamilie", "D-011", "ADR-0006", "G3", "G5", "ADR-0002"]
+    }
+  ]
+}
