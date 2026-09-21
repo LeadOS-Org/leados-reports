@@ -2,6 +2,13 @@
   "$schema": "./schema/index.schema.json",
   "reports": [
     {
+      "id": "2026-09-21-sprint-1-5-abschluss-und-navigation",
+      "typ": "Tagesbericht",
+      "datum": "2026-09-21",
+      "titel": "Sprint 1.5 (Epic G) vollständig abgeschlossen — Navigationslücke als neuer Diskussionspunkt",
+      "pfad": "reports/2026-09-21-sprint-1-5-abschluss-und-navigation.json"
+    },
+    {
       "id": "2026-09-21-umsetzung-nach-aqds-hygiene",
       "typ": "Tagesbericht",
       "datum": "2026-09-21",
