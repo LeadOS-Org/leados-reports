@@ -1,0 +1,52 @@
+{
+  "id": "2026-09-21-aqds-hygiene-und-standardfamilie",
+  "typ": "Tagesbericht",
+  "datum": "2026-09-21",
+  "titel": "AQGS-Hygiene-Diagnose (Teil 0–4) und Einführung der bmarnau-standards-Familie (D-011, ADR-0006)",
+  "meta": {
+    "teilnehmer": ["Bernd (Chat)"],
+    "anlass": "Diagnose-Auftrag \"AQDS-Hygiene\" (Downloads-Ordner, Provenance-Check gegen AGENTS.md bestanden) plus anschließende Dokumentation der referenzierten Standardfamilie."
+  },
+  "abschnitte": [
+    {
+      "titel": "Zusammenfassung",
+      "typ": "text",
+      "inhalt": "\"AQDS\" im Auftrag war ein Tippfehler für AQGS (Application Quality Gate Standard, bmarnau-standards/AQGS-Application-Quality-Gate-Standard). Diagnose Teil 1–4 durchgeführt: Die drei aktiven LeadOS-Repos liegen unter der Organisation LeadOS-Org (nicht unter dem persönlichen Account). Gefundene Abweichungen: kein Branch-Schutz auf main in allen drei Repos; alle 5 letzten Commits auf leados-design-foundation/main unsigniert; main dort aktuell CI-rot (11 ESLint/Prettier-Fehler blockieren Lint, wodurch Build und E2E-Tests gar nicht erreicht werden); keine E2E-Tests für G3 (Z-AVKK-Liste) und G5 (KI-Prüfung); ein offener, divergierter PR #1 in leados-arbeitsstand. Die vier Kern-Dokumente in docs/ sind vollständig und aktuell. Die öffentliche Lovable-Preview-URL (leados-design-foundation.lovable.app) zeigt nur die Design-Foundation-Showcase, keine funktionierende Navigation zu Fünf-Schritte-Ablauf oder Z-AVKK-Liste (/zavkk-liste liefert 404) – wirkt veraltet gegenüber dem Repo-Stand. Anschließend auf Bernds Anweisung Entscheidung D-011 dokumentiert: LeadOS referenziert ab sofort alle sechs Standards aus bmarnau-standards (ADG, TDF, AQGS, security-standard, dsgvo-compliance, ai-act-compliance) als ergänzende Grundlage, festgehalten in ADR-0006 (leados-design-foundation) sowie kurzen Verweisen in den READMEs von leados-reports und leados-arbeitsstand."
+    },
+    {
+      "titel": "Gefundene Abweichungen (keine automatische Korrektur vorgenommen)",
+      "typ": "liste",
+      "inhalt": [
+        "Kein Branch-Schutz auf main in leados-design-foundation, leados-reports und leados-arbeitsstand (auch nicht der in ADR-0002 vorgesehene Mindestschutz gegen Löschung/Force-Push).",
+        "leados-design-foundation/main: letzte 5 Commits unsigniert.",
+        "leados-design-foundation/main: CI rot seit den jüngsten G1/G3/G5-Lovable-Änderungen, Ursache 11 Prettier/ESLint-Fehler im Lint-Schritt; Build und E2E-Tests dadurch nicht erreicht.",
+        "Keine E2E-Tests für G3 (Z-AVKK-Liste) und G5 (KI-Prüfung), nur fuenf-schritte.spec.ts für G1/G2 vorhanden.",
+        "leados-arbeitsstand: offener PR #1 (\"docs: add README\"), Branch von main divergiert, main hat bereits einen ähnlichen Commit separat erhalten.",
+        "leados-design-foundation/README.md veraltet (beschreibt noch \"3/5 Schritte klickbar\").",
+        "Lovable-Preview-URL zeigt veralteten/falschen Stand (nur Design-Showcase, kein funktionierender App-Flow)."
+      ]
+    },
+    {
+      "titel": "Neue Entscheidung",
+      "typ": "text",
+      "inhalt": "D-011 (01_Project/DECISIONS.md, lokal) und ADR-0006 (leados-design-foundation/docs/ADR/): LeadOS referenziert die sechs Standards aus bmarnau-standards als ergänzende, nicht ersetzende Grundlage zu AGENTS.md/LeadOS_Verfassung/PILOT_CHARTER. Technische Durchsetzung (z.B. AQGS-Quality-Gates-Profil) ist bewusst nicht Teil dieser Entscheidung und bleibt offener Folgeschritt."
+    },
+    {
+      "titel": "Offene Punkte",
+      "typ": "liste",
+      "inhalt": [
+        "Drei PRs zur Standards-Dokumentation warten auf Merge durch Bernd: leados-design-foundation #10, leados-reports #1, leados-arbeitsstand #2 (Claude-Code-Auto-Mode verweigert eigenständiges Merge ohne Review).",
+        "CI-Rot auf leados-design-foundation/main (Lint-Fehler) noch nicht behoben.",
+        "Fehlende E2E-Tests für G3/G5 noch nicht ergänzt.",
+        "PR #1 in leados-arbeitsstand noch nicht bereinigt.",
+        "Lovable-Preview-URL-Abweichung noch nicht geklärt.",
+        "Technische AQGS-Einbindung (quality-gates.yaml) noch offen."
+      ]
+    },
+    {
+      "titel": "Bezüge",
+      "typ": "liste",
+      "inhalt": ["D-011", "ADR-0006", "AQGS", "G1", "G2", "G3", "G5", "ADR-0002"]
+    }
+  ]
+}
