@@ -29,3 +29,11 @@ Dieses Repo ist bewusst von `leados-design-foundation` (Produktcode,
 privat) getrennt, damit Berichte ohne Rücksicht auf die Sichtbarkeit
 des Produktrepos veröffentlicht werden können. Git bleibt Single
 Source of Truth — jeder Bericht ist eine versionierte, diff-fähige Datei.
+
+## Referenzierte Standards
+
+LeadOS referenziert die Standardfamilie unter
+[`bmarnau-standards`](https://github.com/bmarnau-standards) (ADG, TDF,
+AQGS, security-standard, dsgvo-compliance, ai-act-compliance) als
+ergänzende, projektübergreifende Grundlage. Näheres siehe ADR-0006 im
+Repository `leados-design-foundation` (`docs/ADR/`).
