@@ -2,6 +2,13 @@
   "$schema": "./schema/index.schema.json",
   "reports": [
     {
+      "id": "2026-09-21-aqds-hygiene-und-standardfamilie",
+      "typ": "Tagesbericht",
+      "datum": "2026-09-21",
+      "titel": "AQGS-Hygiene-Diagnose (Teil 0–4) und Einführung der bmarnau-standards-Familie (D-011, ADR-0006)",
+      "pfad": "reports/2026-09-21-aqds-hygiene-und-standardfamilie.json"
+    },
+    {
       "id": "2026-09-17-abschlusspruefung-und-lovable-umsetzung",
       "typ": "Tagesbericht",
       "datum": "2026-09-17",
