@@ -1,0 +1,31 @@
+{
+  "id": "2026-09-21-live-test-dieter-ablaufkorrekturen",
+  "typ": "Tagesbericht",
+  "datum": "2026-09-21",
+  "titel": "Live-Testsitzung mit Dieter deckt Ablauf-Logikfehler auf — Kapazitätsrechnung grundlegend korrigiert",
+  "meta": {
+    "teilnehmer": ["Bernd (Chat)"],
+    "anlass": "Fortsetzung zum Bericht Sprint-1.5-Abschluss: Live-Testsitzung mit Dieter deckte mehrere echte Logikfehler im Fünf-Schritte-Ablauf auf und führte zu einer grundlegenden Korrektur der Kapazitätsrechnung."
+  },
+  "abschnitte": [
+    {
+      "titel": "Zusammenfassung",
+      "typ": "text",
+      "inhalt": "Live-Testsitzung mit Dieter deckte einen echten Logikfehler auf: der Ablauf sprang fälschlich nach Schritt 2 direkt zur Z-AVKK-Liste, Schritt 3–5 wurden komplett übersprungen. Korrigiert (G11): Ablauf ist wieder linear (1→2→[3+4 je Aufgabe wiederholt]→5→Liste), aktiver Schritt jetzt farblich hervorgehoben. Weitere in derselben Sitzung gefundene und behobene Fehler: doppelte Übernahme bei Browser-Zurück (G13), veralteter Aufgaben-Index bei Rücksprung (G13), fehlender Sprung zu Schritt 5 bei vollständig bearbeiteten Aufgaben (G14). Fachlich geklärt: der Mitarbeiter kann in Schritt 3 keine neuen Aufgaben vorschlagen, alle vom Unternehmer gestellten Aufgaben müssen aber durchlaufen werden (bereits durch G11 erfüllt). Neuer Auftrag unterwegs: Inhalt von Schritt 3/4 zurücktauschen (Korrektur einer seit 18.09. zurückgestellten Änderung) plus Neustart-Option-Konsistenz. Zusätzlich: Zeitart (\"Pro Tag\"/\"Pro Woche\") je Aufgabe und ein neues, unabhängiges Wochenlimit eingeführt (G16), danach grundlegend korrigiert (G18) — \"Bis wann\" hat keine Bedeutung mehr für die Kapazitätsrechnung, reiner Informationshinweis. Neues Modell: rein fortlaufend, ohne Datumsbezug — offene Aufgaben zählen dauerhaft zur aktuellen Tages- bzw. Wochenauslastung, verglichen mit Tages- bzw. Wochenlimit, keine Tages-für-Tages-Balken mehr. Dauer-Parsing-Bug gefunden (Minuten werden als Stunden gelesen) und Korrektur beauftragt (G17)."
+    },
+    {
+      "titel": "Offene Punkte",
+      "typ": "liste",
+      "inhalt": [
+        "Schritt-3/4-Inhaltstausch + Neustart-Option-Konsistenz: Prompt raus, Rückmeldung steht noch aus.",
+        "G17 (Dauer-Parsing-Einheiten) und G18 (fortlaufendes Kapazitätsmodell): Prompts raus, Rückmeldung steht noch aus.",
+        "Navigation Z-AVKK-Liste ↔ Ablauf: Rücksprung von der Liste in einzelne Aufgaben weiterhin offen, unabhängig von den heutigen Ablaufkorrekturen (die betrafen den Vorwärtsweg, nicht den Rücksprung aus der Liste)."
+      ]
+    },
+    {
+      "titel": "Bezüge",
+      "typ": "liste",
+      "inhalt": ["G11", "G12", "G13", "G14", "G16", "G17", "G18", "2026-09-21-sprint-1-5-abschluss-und-navigation"]
+    }
+  ]
+}

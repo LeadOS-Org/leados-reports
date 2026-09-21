@@ -2,6 +2,13 @@
   "$schema": "./schema/index.schema.json",
   "reports": [
     {
+      "id": "2026-09-21-live-test-dieter-ablaufkorrekturen",
+      "typ": "Tagesbericht",
+      "datum": "2026-09-21",
+      "titel": "Live-Testsitzung mit Dieter deckt Ablauf-Logikfehler auf — Kapazitätsrechnung grundlegend korrigiert",
+      "pfad": "reports/2026-09-21-live-test-dieter-ablaufkorrekturen.json"
+    },
+    {
       "id": "2026-09-21-sprint-1-5-abschluss-und-navigation",
       "typ": "Tagesbericht",
       "datum": "2026-09-21",
