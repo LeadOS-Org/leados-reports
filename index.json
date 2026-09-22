@@ -2,6 +2,13 @@
   "$schema": "./schema/index.schema.json",
   "reports": [
     {
+      "id": "2026-09-22-kapazitaetsmodell-und-db-anbindung",
+      "typ": "Tagesbericht",
+      "datum": "2026-09-22",
+      "titel": "Kapazitätsrechnung durch Dieters Spezifikation ersetzt (G22), Datenbank-Anbindung — H1 bereits umgesetzt (Korrektur)",
+      "pfad": "reports/2026-09-22-kapazitaetsmodell-und-db-anbindung.json"
+    },
+    {
       "id": "2026-09-21-live-test-dieter-ablaufkorrekturen",
       "typ": "Tagesbericht",
       "datum": "2026-09-21",
