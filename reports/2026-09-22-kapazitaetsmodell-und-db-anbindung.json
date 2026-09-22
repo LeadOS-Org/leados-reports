@@ -1,0 +1,36 @@
+{
+  "id": "2026-09-22-kapazitaetsmodell-und-db-anbindung",
+  "typ": "Tagesbericht",
+  "datum": "2026-09-22",
+  "titel": "Kapazitätsrechnung durch Dieters Spezifikation ersetzt (G22), Datenbank-Anbindung — H1 bereits umgesetzt (Korrektur)",
+  "meta": {
+    "teilnehmer": ["Bernd (Chat)"],
+    "anlass": "Nach der Live-Testsitzung mit Dieter (21.09., G11–G21) wurde die Kapazitätsrechnung durch Dieters eigene Spezifikation ersetzt (G22) und die Datenbank-Anbindung begonnen."
+  },
+  "abschnitte": [
+    {
+      "titel": "Zusammenfassung",
+      "typ": "text",
+      "inhalt": "Kapazitätsrechnung vollständig durch Dieters eigene Spezifikation ersetzt (G22): Rhythmus vierwertig (einmalig/pro Tag/pro Woche/pro Monat), nur ein Tageslimit, Grundlast- und Engpassrechnung über die gesamte Liste, Abnahmetest exakt bestanden (Kapazität 40h, Grundlast 3,5h, frei 36,5h/7,3h pro Tag, Engpass 8,5h). Code-verifiziert: `Zeitart`-Typ in zavkk.ts bestätigt die vier Rhythmen. Datenbank-Anbindung: B2 bestätigt umgesetzt — bestehende `profiles`-Tabelle (Lovables Cloud/Auth-Setup) zu NUTZER-Konzept erweitert, neue Tabellen `mandant`, `ziel`, `aufgabe` angelegt (code-verifiziert über src/integrations/supabase/types.ts). Login/Registrierung/Passwort-vergessen über Lovables Cloud/Auth vorhanden (B1/B4). Kritischer Sicherheitsfund aus automatischem Scan (Rollen-Eskalation über eigenes Rollenfeld) bestätigt behoben (Migration 0000_harden_profiles_role_and_definer_grants.sql verifiziert)."
+    },
+    {
+      "titel": "Korrektur gegenüber dem Auftrag: H1 ist bereits umgesetzt",
+      "typ": "text",
+      "inhalt": "Der Auftrag ging davon aus, die Z-AVKK-Liste laufe weiterhin auf localStorage und der Umzug auf die Datenbank folge erst mit H1. Code-Prüfung ergab das Gegenteil: H1 ist bereits umgesetzt. src/lib/zavkk.ts trägt den Kommentar \"Die Persistenz liegt seit H1 in der Datenbank (siehe zavkk.functions.ts)\"; eine neue Datei src/lib/zavkk.functions.ts liest/schreibt ausschließlich über die Tabellen ziel/aufgabe (RLS, ohne Rollenfilter, wie in H1 spezifiziert); die App-Routen wurden unter eine neue _authenticated-Struktur verschoben; localStorage wird für Ziel-/Aufgabendaten nicht mehr verwendet (nur noch für eine reine UI-Einstellung, die Kompaktansicht, sowie Supabase-interne Auth-Storage-Mechanik). H2 (ursprünglich: einmalige Migration alter localStorage-Testdaten beim ersten Login) ist dagegen nicht auffindbar — der Bezeichner \"H2\" taucht im Code stattdessen für eine andere Funktion auf (Live-Abgleich bei Änderungen anderer Nutzer desselben Mandanten). Ob die alten localStorage-Testdaten aus Epic G migriert wurden oder verwaist sind, ist ungeklärt."
+    },
+    {
+      "titel": "Offene Punkte",
+      "typ": "liste",
+      "inhalt": [
+        "Ungeklärt: Sind alte localStorage-Testdaten aus Epic G verloren/verwaist, oder wurden sie anderweitig übernommen? Keine Migrationslogik im Code auffindbar.",
+        "Uneinheitliche Nummerierung: 'H2' bezeichnet im aktuellen Code eine Live-Abgleich-Funktion (Mehrnutzer-Synchronisation), nicht die ursprünglich spezifizierte Altdaten-Migration. Sollte mit Bernd/Lovable geklärt werden, ob H2 (Migration) noch separat aussteht oder als erledigt/obsolet gilt.",
+        "RLS-Policies auf profiles/mandant/ziel/aufgabe sind nur teilweise im Repo als Migration nachvollziehbar (nur eine UPDATE-Policy auf profiles committet) — der Rest wurde vermutlich direkt in Supabase angelegt, nicht versioniert."
+      ]
+    },
+    {
+      "titel": "Bezüge",
+      "typ": "liste",
+      "inhalt": ["G22", "B1", "B2", "B4", "H1"]
+    }
+  ]
+}
