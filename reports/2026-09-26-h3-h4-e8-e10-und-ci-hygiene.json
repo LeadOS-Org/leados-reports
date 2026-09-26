@@ -1,0 +1,44 @@
+{
+  "id": "2026-09-26-h3-h4-e8-e10-und-ci-hygiene",
+  "typ": "Tagesbericht",
+  "datum": "2026-09-26",
+  "titel": "H3/H4 (Entwürfe, Fortsetzen-Dialog), E8–E10 (Startseite/GitHub-Sync/Zombie-Aufräumen) umgesetzt; CI durchgehend grün; Arbeitsstand-Seite repariert",
+  "meta": {
+    "teilnehmer": ["Bernd (Chat)"],
+    "anlass": "Umfangreicher Arbeitstag: mehrere Lovable-Aufträge aus dem Downloads-Ordner (Auftragssammlung, GitHub-Verbindung, H3, H4, E8-E10-Freigabe, E2E-CI-Befund) abgeglichen und als bereits umgesetzt/gelöst bestätigt; zusätzlich ein konkreter Fehler auf der Arbeitsstand-Seite gefunden und behoben."
+  },
+  "abschnitte": [
+    {
+      "titel": "Zusammenfassung",
+      "typ": "text",
+      "inhalt": "H3 (Entwürfe-Mechanismus): neues Feld `freigegeben` (boolean) in `ziel`/`aufgabe` bestimmt Sichtbarkeit in der Z-AVKK-Liste; ein neues Ziel oder eine per „+ Aufgabe“ nachgetragene Aufgabe zu einem bestehenden Ziel wird ab Schritt 1 in der Datenbank angelegt und bei jedem Schritt aktualisiert, erscheint aber erst nach Abschluss (Bulk-Update auf freigegeben=true) in der Liste; höchstens ein offener Entwurf je Nutzer; feste Navigationsleiste (\"Ablauf\"/\"Z-AVKK-Liste\") erlaubt jederzeit Wechsel und Fortsetzen an der verlassenen Stelle, Entwurf lädt aus der DB statt aus Browserzustand. H4: nativer Browser-confirm() beim Fortsetzen/Verwerfen eines unfertigen Entwurfs durch einen eigenen Dialog mit zwei eindeutig beschrifteten Buttons ersetzt (vermeidet Verwechslung mit generischem OK/Abbrechen); Verwerfen bleibt destruktiv gekennzeichnet. E8-E10 (nach Prüfung gegen den echten Repo-Stand freigegeben und umgesetzt): Startseite für Angemeldete (zeitabhängige Begrüßung, Vorname aus Anzeigename, Fortsetzen-/Neu-Knopf je nach offenem Entwurf, drei Kacheln Ziele/Aufgaben/fehlende Bedingungen, Schnellzugriff Z-AVKK-Liste, Systemstatus-Kachel nur für Plattform-Admins); Repo-Statuszeile mit echtem GitHub-Sync-Abgleich (Lesezugriff auf main-Branch, Commit-Hash-Vergleich, \"Sync nicht prüfbar\" statt erfundenem Status); Zombie-Aufräumen im Systemstatus (unfertige Entwürfe seit über 24 Std. unverändert oder Aufgabe ohne gültiges Ziel, serverseitige Prüfung, nur für Plattform-Admins, freigegebene Einträge werden nie angefasst, erst zählen/anzeigen dann Rückfrage dann löschen)."
+    },
+    {
+      "titel": "Git-/CI-Hygiene",
+      "typ": "text",
+      "inhalt": "Die GitHub-Actions-Pipeline \"CI Build & Lint\" von leados-design-foundation war an jedem Lauf des heutigen Tages rot: zunächst 468 automatisch behebbare ESLint/Prettier-Fehler (Commit 0d58bc3), danach 26 verbleibende manuelle Fehler (any-Typen, prefer-const, Commit b9e8be0), zuletzt generierte Supabase-Integrationsdateien, die komplett vom Linting ausgenommen werden mussten (Commit 8d9233d). Letzter Lauf (Run-ID 36259377692, Commit 8d9233d) ist grün. Zusätzlich aufgefallen und benannt: der Workflow übergibt dem Runner keine Supabase-Zugangsdaten (kein env-Block, keine secrets-Referenz) – die vollständigen End-zu-Ende-Tests liefen auf GitHub nie wirklich mit einer echten DB-Verbindung; als Gegenmaßnahme laufen dort jetzt drei schnelle Basisprüfungen ohne Datenbankzugriff (Commit 6ab54be, \"Grüne Tests ohne DB-Zugang\"), die vollständigen E2E-Tests weiterhin nur lokal bei Lovable. Damit ist die Prüfabdeckung auf GitHub selbst kleiner geworden als zuvor angenommen – als offener Punkt vorgemerkt, nicht stillschweigend als gleichwertig behandelt."
+    },
+    {
+      "titel": "Befund und Korrektur: Arbeitsstand-Seite aktualisierte nur das statische Fallback-Markup, nicht STATE",
+      "typ": "text",
+      "inhalt": "Beim Nachpflegen dieser Seite (leados-arbeitsstand) für den heutigen Stand zeigte sich, dass eine vorherige, separate Session am selben Tag (Commit a4cc624, \"Stand vom 26.09.2026 nachgetragen\") zwar inhaltlich korrekten und gut recherchierten Text verfasst hatte, diesen aber nur in das statische #app-Vorab-Rendering im Body geschrieben hatte statt in das eigentliche STATE-Objekt im Script. Da `mount(STATE)` beim Laden der Seite `#app.innerHTML` bedingungslos aus STATE neu erzeugt, war die Aktualisierung für echte Besucher unsichtbar – STATE.updated stand weiterhin auf \"21.09.2026\". Dasselbe Fehlermuster war bereits am 21.09. einmal aufgetreten und per Commit 0653772 behoben worden, ist also ein wiederkehrendes Risiko dieser Zwei-Ebenen-Architektur (statisches Fallback-Markup + STATE, aus dem clientseitig neu gerendert wird). Korrektur (Commit d4b06db): STATE direkt bearbeitet (Meilensteine, Verlauf, Entwicklungsverlauf, offene Punkte, eine neue Entscheidung d017 zu bmarnau-standards) und das statische Markup programmatisch aus dem aktualisierten STATE neu erzeugt (renderBody(STATE) lokal mit Node ausgeführt), statt von Hand geschrieben. Verifiziert: das gesamte Inline-Script parst als gültiges JavaScript, STATE parst, und das neu erzeugte statische Markup ist nachweislich byte-identisch mit dem, was renderBody(STATE) direkt liefert. Nebenbefund beim Bearbeiten: ein voreiliger erster Bearbeitungsversuch hätte durch eine falsche Array-Indexannahme den echten, bereits vorhandenen Meilenstein \"Terminologie- & Muss-Check-Revision\" überschrieben – vor dem Veröffentlichen bemerkt und korrigiert, nicht live gegangen."
+    },
+    {
+      "titel": "Offene Punkte",
+      "typ": "liste",
+      "inhalt": [
+        "H2-Altdaten-Migration (Zwischenspeicher aus Epic G): ungeklärt, ob verwaist oder übernommen – der Bezeichner „H2“ wird im Code stattdessen für den Live-Abgleich verwendet.",
+        "H5 (Schutz gegen gleichzeitige Bearbeitung derselben Aufnahme in zwei Tabs derselben Person) bewusst zurückgestellt.",
+        "GitHub-Sync-Anzeige im Systemstatus meldet weiterhin 403 trotz erteilter Organisationsfreigabe.",
+        "CI-Testabdeckung auf GitHub reduziert (nur noch Basisprüfungen ohne DB-Zugriff) – eigene Test-Datenbank für CI wäre ein separater, noch nicht beauftragter Punkt.",
+        "Logo und Link zum Hanseatischen Institut auf der neuen Startseite stehen von Bernd noch aus.",
+        "Governance-Frage: Die Track-C-Umsetzung (RBAC-Vorbereitung ist_plattform_admin, Startseite, GitHub-Sync) lief bereits vor Dieters formeller Bestätigung der Rollenmodell-Arbeitshypothese und vor der M1-007-Pilotentscheidung, obwohl BACKLOG.md diese Arbeit ausdrücklich als Entwurf 'bis M1-007 positiv entschieden UND Rollenmodell-Frage geklärt' markiert hatte. Zu klären, ob das bewusst vorgezogen wurde (dann DECISIONS.md/BACKLOG.md nachtragen) oder eine ungeplante Scope-Erweiterung ist."
+      ]
+    },
+    {
+      "titel": "Bezüge",
+      "typ": "liste",
+      "inhalt": ["H3", "H4", "E8", "E9", "E10", "D-011"]
+    }
+  ]
+}
