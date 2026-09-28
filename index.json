@@ -2,10 +2,17 @@
   "$schema": "./schema/index.schema.json",
   "reports": [
     {
+      "id": "2026-09-28-ci-testdatenbank-aqgs-h1",
+      "typ": "Tagesbericht",
+      "datum": "2026-09-28",
+      "titel": "CI-Tests gegen isolierte, leere Datenbank (21/21 grün), AQGS-Ergänzung zu G5 gemergt, H1-Beispieldaten echt geprüft",
+      "pfad": "reports/2026-09-28-ci-testdatenbank-aqgs-h1.json"
+    },
+    {
       "id": "2026-09-26-h3-h4-e8-e10-und-ci-hygiene",
       "typ": "Tagesbericht",
       "datum": "2026-09-26",
-      "titel": "H3/H4 (Entwürfe, Fortsetzen-Dialog), E8–E10 (Startseite/GitHub-Sync/Zombie-Aufräumen) umgesetzt; CI durchgehend grün; Arbeitsstand-Seite repariert",
+      "titel": "H3/H4 (Entwürfe, Fortsetzen-Dialog) und E8–E10 (Startseite, GitHub-Sync, Zombie-Aufräumen) umgesetzt; CI grün",
       "pfad": "reports/2026-09-26-h3-h4-e8-e10-und-ci-hygiene.json"
     },
     {
