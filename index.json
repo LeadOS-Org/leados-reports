@@ -2,6 +2,13 @@
   "$schema": "./schema/index.schema.json",
   "reports": [
     {
+      "id": "2026-09-28-governance-und-migrationshistorie",
+      "typ": "Tagesbericht",
+      "datum": "2026-09-28",
+      "titel": "Regeln für main (D-012) technisch abgesichert, Migrationshistorie vervollständigt, Treffen mit Dieter vorbereitet",
+      "pfad": "reports/2026-09-28-governance-und-migrationshistorie.json"
+    },
+    {
       "id": "2026-09-28-ci-testdatenbank-aqgs-h1",
       "typ": "Tagesbericht",
       "datum": "2026-09-28",

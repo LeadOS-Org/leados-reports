@@ -1,0 +1,75 @@
+{
+  "id": "2026-09-28-governance-und-migrationshistorie",
+  "typ": "Tagesbericht",
+  "datum": "2026-09-28",
+  "titel": "Regeln für main (D-012) technisch abgesichert, Migrationshistorie vervollständigt, Treffen mit Dieter vorbereitet",
+  "meta": {
+    "teilnehmer": ["Bernd (Chat)", "Lovable (Migrationen)"],
+    "anlass": "Fortsetzung des 28.09.2026 (Abend): Befunde aus dem Projektstatus abgearbeitet – Governance-Frage zu direkten Änderungen auf main, Lücke in der Migrationshistorie, Überarbeitung der Meeting-Vorbereitung für Dieter."
+  },
+  "abschnitte": [
+    {
+      "titel": "Zusammenfassung",
+      "typ": "text",
+      "inhalt": "Drei Stränge abgeschlossen: (1) Bernd hat D-012 entschieden – Produktcode und Standards nur noch per Pull Request, Berichts- und Statusrepos direkt auf main nur mit signiertem Commit; die Regeln sind auf GitHub technisch eingerichtet. (2) Die Tabellen profiles und einstellungen, die bisher nur in der Produktivdatenbank existierten, sind jetzt als Migrationen im Repository; die CI baut die Datenbank erstmals ausschließlich daraus auf und ist grün. (3) Die Meeting-Vorbereitung für Dieter ist gegen alle Quellen geprüft, korrigiert und als eigenständiges Dokument für Dieter aufbereitet."
+    },
+    {
+      "titel": "D-012: Regeln für direkte Änderungen auf main",
+      "typ": "tabelle",
+      "inhalt": {
+        "spalten": ["Repository", "Regel", "Ausnahme"],
+        "zeilen": [
+          ["leados-design-foundation", "Nur per Pull Request, Prüfung build-lint muss grün sein, Bernd mergt", "Lovable-App (GitHub-Sync)"],
+          ["bmarnau-standards/AQGS", "Nur per Pull Request, Bernd mergt; KI-Sitzungen mergen dort nie selbst", "keine (der PDF-Workflow braucht keine)"],
+          ["leados-reports", "Direkt auf main erlaubt, nur signierte Commits, gilt auch für Admins", "–"],
+          ["leados-arbeitsstand", "Direkt auf main erlaubt, nur signierte Commits, gilt auch für Admins", "–"]
+        ]
+      }
+    },
+    {
+      "titel": "Migrationshistorie vervollständigt",
+      "typ": "text",
+      "inhalt": "Lovable hat nach Freigabe des SQL durch Bernd zwei Migrationen ergänzt (Commit 69814b1): 00000_baseline_profiles.sql legt den Ur-Zustand von profiles an und wird auf der Produktivdatenbank per Journal-Zeitstempel übersprungen; 0008_einstellungen.sql legt einstellungen mit der aktuellen Admin-Regel an und hat auf der Produktivdatenbank nichts verändert (idempotent, von Lovable nachgeprüft). drizzle-kit check ohne Fehler. Geklärt: einstellungen dürfen nur Plattform-Admins lesen (seit 28.09. verschärft), CHANGELOG nachgetragen. Befund: In der Produktivdatenbank sind 10 Migrationen eingetragen, zur ältesten fehlt die Datei – nicht wiederherstellbar, dokumentiert."
+    },
+    {
+      "titel": "CI baut die Datenbank nur noch aus den Migrationen",
+      "typ": "text",
+      "inhalt": "PR #20 (gemergt als 0e27322): Die rekonstruierte CI-Hilfsdatei ist entfernt, sie kollidierte mit der neuen Baseline (gleiche Version 00000, CI auf 69814b1 rot). Erster Anlauf mit „supabase migration up“ scheiterte: Die Supabase-CLI sortiert die Versionen als Text („0000“ vor „00000“) und wendete 0000 vor der Baseline an. Die ursprüngliche Annahme, 00000 sortiere vor 0000, war falsch und bei der SQL-Prüfung nicht hinterfragt worden. Lösung: Die CI wendet die Migrationen mit drizzle-kit migrate an, demselben Werkzeug wie auf der Produktivdatenbank, in Journal-Reihenfolge. Ergebnis: Die leere Datenbank lässt sich vollständig aus dem Repository aufbauen, alle E2E-Tests laufen erstmals gegen die echte Admin-Regel auf einstellungen."
+    },
+    {
+      "titel": "Meeting-Vorbereitung für Dieter",
+      "typ": "liste",
+      "inhalt": [
+        "Widerspruch in den Unterlagen benannt: Das RBAC-Konzept (13.09.) setzt Führungskraft mit Unternehmer gleich, das Architekturkonzept Track C (17.09.) führt sie als eigene Stufe – Dieter entscheidet.",
+        "Drei Track-C-Fragen waren laut RBAC-Konzept schon beantwortet (Mandantenmodell, Anmeldemethode, Registrierungsweg), die Startseite ist bereits gebaut – nur noch zu bestätigen bzw. zu zeigen.",
+        "Rechenfehler in der Agenda behoben: Track C #8 und die E-Mail-Punkte waren keinem Block zugeordnet. Neue Summe ca. 90 Minuten, ca. 75 Minuten bei Vorab-Klärung von vier Punkten per E-Mail.",
+        "Ergänzt: Bestätigung des KI-Regelwerks (G5, läuft als Arbeitsversion), die offene Lesart-Frage zu „Neu starten“ in Schritt 5, Vorstellung der Kapazitätsrechnung (G22) und ein Hinweis auf vorab gebaute Track-C-Teile.",
+        "Infoblock für Dieter am Anfang (Zweck, Links, Neues seit 21.09., was wir brauchen, Begriffe); das ganze Dokument spricht Dieter jetzt direkt an."
+      ]
+    },
+    {
+      "titel": "Weitere Aufräumarbeiten",
+      "typ": "liste",
+      "inhalt": [
+        "Zwei gemergte Branches gelöscht (docs/stand-2026-09-28, docs/g5-managed-platform-migration-replay).",
+        "Index-Titel vom 26.09. in leados-reports auf die Schema-Grenze von 120 Zeichen gekürzt; D-011 in der Übersichtstabelle von DECISIONS.md nachgetragen.",
+        "Kaputte Zeichen in der exportierten Meeting-Vorbereitung korrigiert (das Claude-Docs-Dokument selbst war fehlerfrei)."
+      ]
+    },
+    {
+      "titel": "Offene Punkte",
+      "typ": "liste",
+      "inhalt": [
+        "Bernd: entscheiden, ob vier Punkte vorab per E-Mail an Dieter gehen (Schritt 5, DSGVO-Aufbewahrungsfrist, Audit-Log, KI-Regelwerk – Regeltext mitschicken).",
+        "Bernd: prüfen, ob Dieters Antwort auf die SystemCheck-Klärungsmail und das Glossar-Beispiel schon vorliegen.",
+        "GitHub-Schlüssel für den Lovable-Sync läuft am 26.10.2026 ab.",
+        "Im AQGS-Repo liegen 15 ältere Branches – nicht Teil dieses Auftrags."
+      ]
+    },
+    {
+      "titel": "Bezüge",
+      "typ": "liste",
+      "inhalt": ["D-012", "D-011", "G5", "G22", "AQGS G5"]
+    }
+  ]
+}
