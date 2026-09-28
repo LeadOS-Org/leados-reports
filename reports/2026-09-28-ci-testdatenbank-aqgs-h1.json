@@ -1,0 +1,71 @@
+{
+  "id": "2026-09-28-ci-testdatenbank-aqgs-h1",
+  "typ": "Tagesbericht",
+  "datum": "2026-09-28",
+  "titel": "CI-Tests gegen isolierte, leere Datenbank (21/21 grün), AQGS-Ergänzung zu G5 gemergt, H1-Beispieldaten echt geprüft",
+  "meta": {
+    "teilnehmer": ["Bernd (Chat)"],
+    "anlass": "Tagesabschluss 28.09.2026 auf Basis des Projektstatus-Dokuments vom selben Tag (Nachmittag)."
+  },
+  "abschnitte": [
+    {
+      "titel": "Zusammenfassung",
+      "typ": "text",
+      "inhalt": "Drei Arbeitsstränge abgeschlossen: (1) Die automatischen End-zu-Ende-Tests auf GitHub laufen nicht mehr gegen eine geteilte, dauerhaft befüllte Testdatenbank, sondern gegen eine eigene, leere Supabase-Instanz, die bei jedem CI-Lauf neu gestartet wird – vollständig grün (21/21). (2) Eine daraus abgeleitete Ergänzung des Application Quality Gate Standard (AQGS) wurde als PR #24 eingereicht und gemergt. (3) Die Beispieldaten beim ersten Aufruf (H1) sind jetzt mit einem eigenen Test gegen einen wirklich leeren Mandanten geprüft. Außerdem ist die Meeting-Vorbereitung für Dieter fertig, mit einer sortierten Agenda."
+    },
+    {
+      "titel": "CI-Testdatenbank: Verlauf",
+      "typ": "tabelle",
+      "inhalt": {
+        "spalten": ["#", "Commit", "Befund / Fix"],
+        "zeilen": [
+          ["1", "a2de5bf", "Grundgerüst; in config.toml fehlte die lokale Entwicklungskonfiguration"],
+          ["2", "f3ce239", "supabase init --force behebt die Konfigurationslücke"],
+          ["3", "–", "Echter Befund: Die Tabelle profiles existiert außerhalb der getrackten Migrationen (Migration 0000 setzt sie bereits voraus)"],
+          ["4", "a82ece8", "Baseline-Fixture geschrieben; Schema-Export von Lovable gegen 0001 geprüft (Export zu großzügig, Bedarf enger gefasst) – Lauf scheiterte identisch"],
+          ["5", "570af6b", "Log-Diagnose: Die Baseline-Datei wird von supabase start nicht eingelesen (Ursache nicht abschließend geklärt)"],
+          ["6", "f729762", "Umgehung: Zwei-Phasen-Start (erst Baseline, dann echte Migrationen per migration up)"],
+          ["7", "576efa8", "„Invalid supabaseUrl“: supabase status -o env setzt Anführungszeichen, die in GITHUB_ENV wörtlich übernommen wurden – per sed-Filter behoben; 19/21 grün"],
+          ["8a", "7688837", "entwurf-nachtrag.spec.ts verließ sich auf Restdaten der alten geteilten Instanz – eigenes Fixture"],
+          ["8b", "8e1ab6b", "Testfall H4 braucht zwei statt ein Fixture-Ziel"],
+          ["8c", "59f54f3", "Zweite Migrationslücke: Tabelle einstellungen ebenfalls außerhalb der Migrationshistorie – Baseline erweitert"]
+        ]
+      }
+    },
+    {
+      "titel": "Wichtigster Nebeneffekt",
+      "typ": "text",
+      "inhalt": "Die echte Datenbank-Isolation hat zwei bislang unsichtbare Lücken in der Migrationshistorie (profiles, einstellungen) und zwei stillschweigende Abhängigkeiten von Testdaten der alten geteilten Instanz aufgedeckt. Genau diese Fehlerklasse verdeckt eine dauerhaft befüllte, geteilte Testinstanz strukturell. Nachgezogen: supabase/.temp/ ist von Git ausgeschlossen (b624795)."
+    },
+    {
+      "titel": "AQGS-Ergänzung (PR #24, 1.3.0-draft → 1.4.0-draft)",
+      "typ": "text",
+      "inhalt": "Normativer Kern zu Gate G5 (Data and Schema Integrity): Hält eine verwaltete Entwicklungsplattform (z. B. Lovable) die einzige Produktionsdatenbank und gewährt keinen gleichwertigen Zweitzugang, muss der Nachweis, dass sich alle Migrationen sauber nachspielen lassen, trotzdem gegen eine isolierte Instanz erbracht werden. Ein fehlerfreies Nachspielen gegen die bestehende, bereits befüllte Instanz gilt nicht als gleichwertig. Gemergt als a2067a6 direkt in main von bmarnau-standards/AQGS-Application-Quality-Gate-Standard."
+    },
+    {
+      "titel": "H1-Beispieldaten: erstmals echt verifiziert",
+      "typ": "text",
+      "inhalt": "Der bisherige Test in zavkk-liste.spec.ts prüfte nur, dass irgendein Ziel sichtbar ist. Seit der Fixture-Korrektur in entwurf-nachtrag.spec.ts war der Mandant beim ersten Aufruf der Z-AVKK-Liste nie mehr leer – die H1-Logik lief in der Testsuite faktisch nicht mehr, ohne dass es auffiel. Neu (4720b67): 00-beispieldaten-erstaufruf.spec.ts läuft als erstes Spec-File, prüft die beiden erwarteten Beispiel-Ziele inhaltlich und dass erneutes Laden nicht doppelt befüllt; danach wird der Mandant wieder geleert. CI grün."
+    },
+    {
+      "titel": "Meeting-Vorbereitung für Dieter",
+      "typ": "text",
+      "inhalt": "22 offene Fragen in fünf Themen (Rollenmodell, RBAC, Navigation, Track C, Sonstiges), dazu eine sortierte Agenda mit sieben Blöcken: Rollenmodell zuerst, weil es die RBAC-Struktur bestimmt. Live-Zeitbedarf ca. 80 Minuten, ca. 70 Minuten, wenn drei Punkte ohne Abwägungsbedarf (Schritt-5-Navigation, DSGVO-Aufbewahrungsfrist, Audit-Log) vorab per E-Mail geklärt werden. Beim Nachbereiten wurden drei beschädigte Zeichen in der exportierten Agenda-Tabelle korrigiert."
+    },
+    {
+      "titel": "Offene Punkte",
+      "typ": "liste",
+      "inhalt": [
+        "Zwei gemergte, aber nicht gelöschte Remote-Branches (docs/stand-2026-09-28 in leados-design-foundation, docs/g5-managed-platform-migration-replay in AQGS) – unschädlich, nur über die GitHub-Oberfläche löschbar.",
+        "Offen, ob Bernd die drei Punkte zur Vorab-Klärung (Navigation #1, RBAC #10, RBAC #17) per E-Mail an Dieter schickt.",
+        "Die Baseline-Fixture ist eine Umgehung: Die eigentliche Lücke in der Migrationshistorie (profiles, einstellungen) besteht in der Drizzle-Kette weiter.",
+        "Governance: Die Arbeiten des Tages gingen direkt auf main (leados-design-foundation, AQGS), obwohl AGENTS.md keine direkten Änderungen am Standardzweig vorsieht – Entscheidungsvorlage D-012 in DECISIONS.md vorbereitet."
+      ]
+    },
+    {
+      "titel": "Bezüge",
+      "typ": "liste",
+      "inhalt": ["H1", "H4", "AQGS G5", "D-011", "D-012"]
+    }
+  ]
+}
