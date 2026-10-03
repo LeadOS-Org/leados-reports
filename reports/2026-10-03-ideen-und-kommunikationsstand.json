@@ -1,0 +1,90 @@
+{
+  "id": "2026-10-03-ideen-und-kommunikationsstand",
+  "typ": "Tagesbericht",
+  "datum": "2026-10-03",
+  "titel": "Diskussionsstand: Merker-Methodik und Vertretung bei Abwesenheit als Ideen festgehalten, Unterlagen für Dieter gebündelt",
+  "meta": {
+    "teilnehmer": ["Bernd (Chat)", "Claude Code (Dokumentation)"],
+    "anlass": "Projektdokumentation auf den Stand vom 03.10.2026 gebracht. Ausschließlich Dokumentation von Ideen und Kommunikationsstand – Diskussionsstand, keine Entscheidung. Keine neuen Sprints oder Meilensteine, keine Änderung an Pilot, Plan oder Meilensteinen."
+  },
+  "abschnitte": [
+    {
+      "titel": "Zusammenfassung",
+      "typ": "text",
+      "inhalt": "Zwei Ideen sind als Diskussionsstand festgehalten: (1) eine Merker-Methodik für Verbesserungs-Merker, für die „nie Zeit ist“, und (2) eine Skizze zur befristeten Vertretung bei Abwesenheit. Beide stehen im neuen Ideenspeicher docs/IDEEN.md in leados-design-foundation (PR #27, Merge durch Bernd). Die offenen Punkte für Dieter sind in einer aktualisierten Übersicht mit fünf Paketen gebündelt; alle Schreiben sind Entwürfe, der Versandstatus ist nicht bekannt und von Bernd zu bestätigen. Nichts davon ist entschieden oder von Dieter bestätigt."
+    },
+    {
+      "titel": "Idee 1: Merker-Methodik (Umgang mit Typ-2-Arbeitspaketen)",
+      "typ": "liste",
+      "inhalt": [
+        "Kontext: Im Systemhaus (Sysingboard) gibt es konkrete Ziele (Typ 1) und Verbesserungs-Merker „wenn Zeit ist“ (Typ 2). Für Typ 2 ist nie Zeit, der Bestand wächst.",
+        "Hypothese (nicht belegt): Strukturproblem, kein Disziplinproblem – einem Merker fehlt ein vollständiges Z-AVKK, vor allem die Konsequenz bei Nichtstun, ein Verantwortlicher und reservierte Kapazität. Widerlegt wäre sie, wenn die meisten Merker Ideen ohne Nutzen sind; dann reicht Löschen.",
+        "Stufe 1 (Minimalregel, als Pilot testbar): Eine Idee wird erst Arbeitspaket bei vollständigem Z-AVKK mit benannter Konsequenz; ein fester Review-Termin entscheidet je Merker: umsetzen, ablehnen oder verfallen lassen („später“ nicht zulässig).",
+        "Stufe 2 (nur bei Bedarf): Verfallsdatum für Merker ohne Nutzen (z. B. 90 Tage) und feste Kapazitätsquote (z. B. 10–20 %) – Zahlenwerte sind Platzhalter.",
+        "KI-Aspekt (von Bernd eingebracht): Blocker-Feld je Merker – nutzen_unklar (Verfall gilt), kapazitaet, machbarkeit (Wiedervorlage bei neuem Modell oder quartalsweise statt Verfall).",
+        "Erster Schritt vor jeder Regel: Bestandsaufnahme (Anzahl, Alter, Blocker-Art der Merker im Sysingboard).",
+        "Risiken: mehr Verwaltung, KI als Schlupfloch gegen die Nutzenprüfung, Aufwand verschiebt sich nur, ungetestete Platzhalterwerte.",
+        "Status: Diskussionsvorschlag, Rückmeldung von Dieter ausstehend."
+      ]
+    },
+    {
+      "titel": "Idee 2: Delegation und Vertretung bei Abwesenheit",
+      "typ": "liste",
+      "inhalt": [
+        "Erster Schritt: befristete Vertretung bei Abwesenheit (Urlaub, Krankheit). Weiterdelegation und dauerhafte Stellvertretung sind spätere Schritte.",
+        "Modell (Skizze): Variante eines Z-AVKK mit Verweis auf das Original, Vertreter, Zeitraum, automatischer Rückgabe am Ende und übertragenen Kompetenzen nur als Teilmenge. Abwesenheitsgrund bewusst nur „abwesend“ (kein Gesundheitsdatum).",
+        "Arbeitshypothese: Ausführung übertragbar, Gesamtverantwortung beim Delegierenden, Vertreter trägt Konsequenzen im übertragenen Rahmen.",
+        "Abhängigkeiten: dauerhafte Speicherung, Nutzerkonten, Rollen- und Rechtemodell; im Pilot nicht abbildbar (D-009); Datenschutzprüfung vor Echtbetrieb (kein Rechtsrat).",
+        "Risiken: Vertreter ohne Wissen (Übergabe), Mehrfachbelastung, Aufgabe ohne Vertreter als Single Point of Failure, temporäre Datensicht des Vertreters, vergessene Rückgabe.",
+        "Status: Idee, nachgelagert, nicht terminiert."
+      ]
+    },
+    {
+      "titel": "Fragen an Dieter zur Vertretung (Paket 5.B, nicht dringend)",
+      "typ": "tabelle",
+      "inhalt": {
+        "spalten": ["Nr.", "Frage", "Vorschlag (nicht bestätigt)"],
+        "zeilen": [
+          ["V1", "Wer benennt den Vertreter?", "MA schlägt vor, Unternehmer bestätigt"],
+          ["V2", "Verantwortungsabgrenzung", "Ausführung übertragbar, Gesamtverantwortung beim Delegierenden"],
+          ["V3", "Standardvertretung oder nur je Abwesenheit?", "Zunächst je Abwesenheit"],
+          ["V4", "Kettenlänge", "Max. eine Stufe"],
+          ["V5", "Abwesenheitsgrund", "Nur „abwesend“"],
+          ["V6", "Weiterdelegation durch MA", "Zunächst nur Unternehmer"]
+        ]
+      }
+    },
+    {
+      "titel": "Kommunikation mit Dieter (Stand 03.10.2026, alles Entwürfe)",
+      "typ": "liste",
+      "inhalt": [
+        "Übersichtsbrief „Offene Punkte LeadOS, aktualisierte Fassung“: fünf Pakete – 1 Pilotentscheidungen (M1-007, L-7, Glossar-Beispiel), 2 Z-AVKK/SystemCheck-Fachklärung, 3 Rollen/Rechte (Rollenmodell, sechs RBAC-Fragen), 4 Ausbau nach Pilot (Anmeldung, Mandanten, DSGVO usw.), 5 Methodik (5.A Merker, 5.B Vertretung). Zu jeder Frage Vorschlag, Risiko und Folge. Löst die beiden früheren Übersichtsfassungen ab.",
+        "Brief „Z-AVKK: Umgang mit Verbesserungs-Merkern, Hypothese und Diskussionsvorschlag“: unverändert gültig, in Paket 5.A referenziert.",
+        "Kurzübersicht „welche Unterlagen aktuell sind“: Gültigkeitsübersicht aller Dokumente.",
+        "Empfohlene Reihenfolge für Dieter: Paket 1, dann Paket 3 vor Paket 4, danach Pakete 2 und 5.",
+        "Versandstatus nicht bekannt – von Bernd zu bestätigen."
+      ]
+    },
+    {
+      "titel": "Arbeitsweise (Bernd, ab 03.10.2026)",
+      "typ": "text",
+      "inhalt": "Umsetzung Schritt für Schritt. Ideen und Diskussionen sind jederzeit möglich, werden separat festgehalten (Ideenspeicher docs/IDEEN.md) und überladen laufende Aufgaben nicht."
+    },
+    {
+      "titel": "Offene Punkte",
+      "typ": "liste",
+      "inhalt": [
+        "Bernd: Versandstatus der Entwürfe an Dieter bestätigen.",
+        "Dieter: Rückmeldung zu Paket 5.A (Merker) und 5.B (Vertretung, V1–V6).",
+        "Bestandsaufnahme der Merker im Sysingboard steht vor jeder Regel aus.",
+        "leados-design-foundation: PR #27 (Ideenspeicher, PROJECT-STATUS.md) wartet auf Bernds Merge.",
+        "Befund: Der letzte CI-Lauf auf main in leados-design-foundation (9547900, 28.09.2026) ist rot – Ursache ein Ratenlimit beim Einrichten der Supabase-CLI, nicht der Code."
+      ]
+    },
+    {
+      "titel": "Bezüge",
+      "typ": "liste",
+      "inhalt": ["IDEE-001", "IDEE-002", "D-009", "D-012", "M1-007", "Paket 5.A", "Paket 5.B"]
+    }
+  ]
+}

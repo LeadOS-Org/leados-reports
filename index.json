@@ -2,6 +2,13 @@
   "$schema": "./schema/index.schema.json",
   "reports": [
     {
+      "id": "2026-10-03-ideen-und-kommunikationsstand",
+      "typ": "Tagesbericht",
+      "datum": "2026-10-03",
+      "titel": "Diskussionsstand: Merker-Methodik und Vertretung bei Abwesenheit als Ideen festgehalten, Unterlagen für Dieter gebündelt",
+      "pfad": "reports/2026-10-03-ideen-und-kommunikationsstand.json"
+    },
+    {
       "id": "2026-09-28-governance-und-migrationshistorie",
       "typ": "Tagesbericht",
       "datum": "2026-09-28",
