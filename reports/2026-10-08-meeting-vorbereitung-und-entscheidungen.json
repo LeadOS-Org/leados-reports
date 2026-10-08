@@ -1,0 +1,60 @@
+{
+  "id": "2026-10-08-meeting-vorbereitung-und-entscheidungen",
+  "typ": "Tagesbericht",
+  "datum": "2026-10-08",
+  "titel": "Treffen mit Dieter vorbereitet, Entscheidungen vom 08.10. eingetragen, Passwort-Reset und Profilseite untersucht",
+  "meta": {
+    "teilnehmer": [
+      "Bernd (Entscheidungen, Freigabe)",
+      "Claude Code (Bestandsaufnahme, Entwurf, Prüfung)"
+    ],
+    "anlass": "Vorbereitung des Treffens mit Dieter am Fr 09.10.2026, 09:00 Uhr."
+  },
+  "abschnitte": [
+    {
+      "titel": "Zusammenfassung",
+      "typ": "text",
+      "inhalt": "Bernd hat vier Entscheidungen getroffen; sie stehen jetzt im Entscheidungslog, Dieters Bestätigung ist für den 09.10. vorgesehen. Für das Zurücksetzen des Passworts (B6) und eine Profilseite (B7) liegt eine Bestandsaufnahme aus dem Code vor. Der Gesprächsleitfaden wurde gegen den Code gegengeprüft und korrigiert. Die Arbeitsstand-Seite ist als Pull Request #10 aktualisiert."
+    },
+    {
+      "titel": "Entscheidungen von Bernd am 08.10. (Bestätigung durch Dieter am 09.10. vorgesehen)",
+      "typ": "tabelle",
+      "inhalt": {
+        "spalten": [
+          "Entscheidung",
+          "Inhalt"
+        ],
+        "zeilen": [
+          [
+            "D-009 Revision",
+            "ADR-0007 ersetzt die Nicht-Speicherung für den Ablauf-Entwurf; bis zu den Zugriffsregeln nur erfundene Testdaten"
+          ],
+          [
+            "D-008 Nachtrag",
+            "Technische Basis Supabase, Drizzle, TanStack Start, Lovable; Risiken benannt; Hosting und Betrieb nach dem Piloten offen"
+          ],
+          [
+            "D-012 Ergänzung",
+            "Paketänderungen durch Lovable erlaubt, wenn die CI grün ist; Meldung im Diff-Check und CHANGELOG; Hauptversionen werden geprüft"
+          ],
+          [
+            "D-014 (Arbeitsannahme)",
+            "Zugriffsregeln vor dem Rest der dauerhaften Speicherung"
+          ]
+        ]
+      }
+    },
+    {
+      "titel": "Weitere Ergebnisse",
+      "typ": "liste",
+      "inhalt": [
+        "B6 (Passwort zurücksetzen): Ursache des Fehlers im Code gefunden; die Behebung ist als Lovable-Auftrag vorbereitet.",
+        "B7 (Profilseite): Die nötigen Daten sind ohne Datenbankänderung verfügbar; Umsetzung nach dem Treffen, eine Rollenanzeige erst nach dem Rollenbeschluss.",
+        "Backlog: SystemCheck-Button für die gemeinsame Sitzung als M1-009 aufgenommen (bisher „L-7“); Hilfeseite P-012 erledigt, Handbuch- und Glossar-Integration offen.",
+        "Gesprächsleitfaden gegen den Code gegengeprüft; zehn Korrekturen in Version 0.5 eingearbeitet.",
+        "Vorab-Mail an Dieter mit sechs Fragen (M1–M6) versendet; ohne Antwort bis Mi 14.10.2026 gilt der Vorschlag (nicht bei M5 und M6).",
+        "Arbeitsstand-Seite: PR #10 mit Verlauf bis 08.10., Umsetzungsplan, Entscheidungen und Fragen an Dieter, mergefähig."
+      ]
+    }
+  ]
+}
