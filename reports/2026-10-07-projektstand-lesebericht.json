@@ -1,0 +1,32 @@
+{
+  "id": "2026-10-07-projektstand-lesebericht",
+  "typ": "Tagesbericht",
+  "datum": "2026-10-07",
+  "titel": "Projektstand rein lesend geprüft: main grün, Persistenz teilweise vorab gebaut, Unterlagen hängen hinterher",
+  "meta": {
+    "teilnehmer": [
+      "Bernd (Auftrag)",
+      "Claude Code (Prüfung, nur lesend)"
+    ],
+    "anlass": "Lesebericht von Claude Code als Grundlage für das Treffen mit Dieter am 09.10.2026. Keine Änderungen an Repositories oder Projektdateien."
+  },
+  "abschnitte": [
+    {
+      "titel": "Zusammenfassung",
+      "typ": "text",
+      "inhalt": "Der Hauptzweig von leados-design-foundation ist grün (HEAD 449b1de, alle Prüfschritte einschließlich End-to-End-Tests). Seit dem 21.09. sind 470 Commits hinzugekommen (424 Lovable, 27 Claude, 19 Bernd); es gibt keine offenen Pull Requests oder Issues. Teile der dauerhaften Speicherung sind bereits gebaut, obwohl der Umsetzungsplan sie erst nach dem Piloten vorsieht. Mehrere Projektunterlagen spiegeln diesen Stand noch nicht wider."
+    },
+    {
+      "titel": "Befunde",
+      "typ": "liste",
+      "inhalt": [
+        "Formatierungsfehler der Hilfeseite sind behoben (vorher 12, jetzt 0).",
+        "Vorhanden: Datenbanktabellen für Ziel und Aufgabe, Entwürfe, Trennung nach Mandant, Anmeldung, Admin-Kennzeichen. Es fehlen: Zugriffsregeln nach Rolle, Datenschutz-Mechanik, MFA, Sitzungs-Zeitlimit.",
+        "Rollen: Das RBAC-Konzept setzt Unternehmer und Führungskraft gleich (drei Rollen), das Architekturkonzept Track C trennt sie (vier Rollen); die Datenbank kennt die drei Rollenwerte nach Track C.",
+        "Der GitHub-Schlüssel mit Ablauf 26.10. betrifft den Sync-Abgleich im Systemstatus, nicht den Lovable-Sync (der läuft über die GitHub-App).",
+        "Lovable ist von der Pull-Request-Pflicht ausgenommen (Entscheidung D-012).",
+        "DECISIONS.md, CHANGELOG.md, BACKLOG.md und PROJECT-STATUS.md hängen hinterher (Hilfeseite, Paketaktualisierung, Verhältnis von D-009 zu ADR-0007)."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "id": "2026-10-08-qualitaet-b4-b5-und-nachbesserung",
+  "typ": "Tagesbericht",
+  "datum": "2026-10-08",
+  "titel": "Qualitätsprüfung B4 und Hilfe-Abgleich B5 geprüft, Nachbesserung per PR #28 gemergt (acb8858, CI grün)",
+  "meta": {
+    "teilnehmer": [
+      "Bernd (Auftrag, Merge)",
+      "Lovable (B4, B5)",
+      "Claude Code (Diff-Check, Nachbesserung per Pull Request)"
+    ],
+    "anlass": "Prüfung der Lovable-Läufe B4 (Barrierefreiheit) und B5 (Hilfe-Texte) und Behebung der dabei gefundenen Punkte."
+  },
+  "abschnitte": [
+    {
+      "titel": "Zusammenfassung",
+      "typ": "text",
+      "inhalt": "Lovable hat in B4 die Überschriftenebenen der Karten, einen sichtbaren Fokusrahmen an den Muss-Checks und eine Befundliste zur Barrierefreiheit umgesetzt, in B5 drei Textkorrekturen der Hilfeseite. Der Diff-Check durch Claude Code bewertete B5 grün und B4 gelb: Im selben Lauf änderte Lovable ohne Meldung ein Paket, und es entstand ein neuer Überschriftensprung in Schritt 2. Beides ist nachgearbeitet bzw. dokumentiert; PR #28 wurde von Bernd gemergt (Squash-Commit acb8858, CI „CI Build & Lint“ grün, Lauf 37741749953)."
+    },
+    {
+      "titel": "Diff-Check B4 und B5",
+      "typ": "tabelle",
+      "inhalt": {
+        "spalten": [
+          "Lauf",
+          "Bewertung",
+          "Begründung"
+        ],
+        "zeilen": [
+          [
+            "B4 (Qualität)",
+            "gelb",
+            "Drei Behebungen wie gemeldet; zusätzlich nicht gemeldete Paketänderung (vite-tanstack-config 2.25.2 → 2.25.3) und neuer Überschriftensprung h2 → h4 in Schritt 2"
+          ],
+          [
+            "B5 (Hilfe-Abgleich)",
+            "grün",
+            "Nur die Textkorrekturen in der Hilfe; Z-AVKK-Text und Quellenangabe unverändert"
+          ]
+        ]
+      }
+    },
+    {
+      "titel": "Nachbesserung (PR #28)",
+      "typ": "liste",
+      "inhalt": [
+        "Schritt 2: Zwischenüberschriften der Aktionsplan-Übersicht von h4 auf h3, Optik unverändert.",
+        "Rollen-Kennzeichen Mitarbeiter: Kontrast des Zusatztexts von 4,29:1 auf 6,68:1 (WCAG AA).",
+        "Befundliste um zwei Befunde ergänzt; Kontrast der Statusfarben rechnerisch gemessen, alle erfüllen AA.",
+        "CHANGELOG nachgetragen: Paketänderungen durch Lovable gab es am 06.10. und am 08.10., am 07.10. keine.",
+        "PROJECT-STATUS auf Stand 08.10. gebracht."
+      ]
+    }
+  ]
+}

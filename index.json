@@ -2,6 +2,27 @@
   "$schema": "./schema/index.schema.json",
   "reports": [
     {
+      "id": "2026-10-08-meeting-vorbereitung-und-entscheidungen",
+      "typ": "Tagesbericht",
+      "datum": "2026-10-08",
+      "titel": "Treffen mit Dieter vorbereitet, Entscheidungen vom 08.10. eingetragen, Passwort-Reset und Profilseite untersucht",
+      "pfad": "reports/2026-10-08-meeting-vorbereitung-und-entscheidungen.json"
+    },
+    {
+      "id": "2026-10-08-qualitaet-b4-b5-und-nachbesserung",
+      "typ": "Tagesbericht",
+      "datum": "2026-10-08",
+      "titel": "Qualitätsprüfung B4 und Hilfe-Abgleich B5 geprüft, Nachbesserung per PR #28 gemergt (acb8858, CI grün)",
+      "pfad": "reports/2026-10-08-qualitaet-b4-b5-und-nachbesserung.json"
+    },
+    {
+      "id": "2026-10-07-projektstand-lesebericht",
+      "typ": "Tagesbericht",
+      "datum": "2026-10-07",
+      "titel": "Projektstand rein lesend geprüft: main grün, Persistenz teilweise vorab gebaut, Unterlagen hängen hinterher",
+      "pfad": "reports/2026-10-07-projektstand-lesebericht.json"
+    },
+    {
       "id": "2026-10-03-ideen-und-kommunikationsstand",
       "typ": "Tagesbericht",
       "datum": "2026-10-03",
