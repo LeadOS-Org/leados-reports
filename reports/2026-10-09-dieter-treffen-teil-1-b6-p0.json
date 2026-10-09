@@ -1,0 +1,38 @@
+{
+  "id": "2026-10-09-dieter-treffen-teil-1-b6-p0",
+  "typ": "Tagesbericht",
+  "datum": "2026-10-09",
+  "titel": "Treffen mit Dieter (Teil 1) mit Beschlüssen, Teil 2 per E-Mail; B6 und P0 abgenommen; Plan v0.3 als Entwurf",
+  "meta": {
+    "teilnehmer": [
+      "Bernd (Treffen, Entscheidungen, Freigabe)",
+      "Dieter (Treffen Teil 1)",
+      "Claude Code (Diff-Check)"
+    ],
+    "anlass": "Treffen mit Dieter am Fr 09.10.2026, Teil 1."
+  },
+  "abschnitte": [
+    {
+      "titel": "Zusammenfassung",
+      "typ": "text",
+      "inhalt": "Teil 1 des Treffens mit Dieter fand am 09.10.2026 statt. Die Beschlüsse zu Rollenmodell, Sichtbarkeit, Änderungsprotokoll und Profil sind protokolliert; die Gegenzeichnung durch Dieter ist vorgesehen. Teil 2 läuft per E-Mail, Frist 14.10.2026."
+    },
+    {
+      "titel": "Ergebnisse",
+      "typ": "liste",
+      "inhalt": [
+        "Passwort-Reset (B6) und Profilseite lesend (P0) umgesetzt und nach Diff-Check durch Claude Code abgenommen; CI auf main grün.",
+        "Umsetzungsplan Persistenz/RBAC liegt als Entwurf v0.3 vor; Konzept Änderungsprotokoll als Entwurf."
+      ]
+    },
+    {
+      "titel": "Nächste Schritte",
+      "typ": "liste",
+      "inhalt": [
+        "Profil bearbeiten (Namensfelder).",
+        "Rollen und Einladung.",
+        "Zugriffsregeln nach Bestätigung durch Dieter."
+      ]
+    }
+  ]
+}

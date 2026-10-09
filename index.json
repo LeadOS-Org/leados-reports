@@ -2,6 +2,13 @@
   "$schema": "./schema/index.schema.json",
   "reports": [
     {
+      "id": "2026-10-09-dieter-treffen-teil-1-b6-p0",
+      "typ": "Tagesbericht",
+      "datum": "2026-10-09",
+      "titel": "Treffen mit Dieter (Teil 1) mit Beschlüssen, Teil 2 per E-Mail; B6 und P0 abgenommen; Plan v0.3 als Entwurf",
+      "pfad": "reports/2026-10-09-dieter-treffen-teil-1-b6-p0.json"
+    },
+    {
       "id": "2026-10-08-meeting-vorbereitung-und-entscheidungen",
       "typ": "Tagesbericht",
       "datum": "2026-10-08",
