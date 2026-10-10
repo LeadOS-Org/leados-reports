@@ -1,0 +1,50 @@
+{
+  "id": "2026-10-10-profil-startseite-git-hygiene",
+  "typ": "Tagesbericht",
+  "datum": "2026-10-10",
+  "titel": "Profilseite und Startseite fertig; automatische Prüfung wieder grün; Rollen und Einladung vorbereitet; GitHub aufgeräumt",
+  "meta": {
+    "teilnehmer": [
+      "Bernd (Entscheidungen, Freigaben, Übernahme der Änderungen)",
+      "Lovable (Umsetzung in der App)",
+      "Claude Code (Diff-Checks, Korrekturen per Pull Request, Git-Hygiene)"
+    ],
+    "anlass": "Arbeitstag Sa 10.10.2026, Stand mittags."
+  },
+  "abschnitte": [
+    {
+      "titel": "Zusammenfassung",
+      "typ": "text",
+      "inhalt": "Die Profilseite ist fertig nachgebessert, die Startseite begrüßt mit Vornamen und zeigt dem Admin eine Karte „Systemstand“. Die automatische Prüfung war zwischenzeitlich rot (nur Formatierung) und ist nach kleinen Korrekturen per Pull Request wieder grün. Ein erster Versuch, die Datenbankänderung für Rollen und Einladung anzuwenden, wurde abgebrochen und vollständig zurückgenommen; die Änderung ist korrigiert, die Anwendung ist offen. Die GitHub-Repositories sind aufgeräumt."
+    },
+    {
+      "titel": "Ergebnisse",
+      "typ": "liste",
+      "inhalt": [
+        "Profilseite (B7c, B7d): korrekte Meldung bei falschem aktuellem Passwort; Hinweis, wenn die Angaben nicht geladen werden können; keine technischen Fehlertexte mehr; synthetische Testdaten. Diff-Check durch Claude Code: kein roter Befund.",
+        "Startseite (B9, B9c): Begrüßung mit Vornamen; Karte „Systemstand“ nur für den Admin, mit Abgleich gegen GitHub; die frühere Kopfzeile entfällt.",
+        "Systemstatus-Seite: neue Karte mit Kennzahlen der Datenbank (nur für den Admin).",
+        "Automatische Prüfung: zwischenzeitlich rot wegen Formatierung; mit Pull Request #35 behoben, danach vier kleine Nacharbeiten (#36 bis #39). Alle Änderungen von Bernd übernommen, Prüfung grün.",
+        "Rollen und Einladung (S1a): Die vorbereitete Datenbankänderung ist korrigiert und noch nicht angewendet. Vor der Anwendung prüft Bernd den Datenbankstand mit einer Kontrollabfrage.",
+        "Git-Hygiene: neun übernommene Arbeitszweige gelöscht; GitHub löscht künftig übernommene Zweige automatisch und erlaubt nur noch eine Art des Zusammenführens; ein ungenutztes Zwischen-Repository archiviert; neue Arbeitskopien außerhalb von OneDrive angelegt."
+      ]
+    },
+    {
+      "titel": "Offene Entscheidungen",
+      "typ": "liste",
+      "inhalt": [
+        "Regel für Datenbankänderungen durch die Entwicklungsplattform (Entwurf D-023): Entscheidung durch Bernd offen.",
+        "Antworten von Dieter auf Teil 2 (Frist Mi 14.10.2026); „sein Team“ und „eigene Einträge“ sind Voraussetzung für die Zugriffsregeln."
+      ]
+    },
+    {
+      "titel": "Nächste Schritte",
+      "typ": "liste",
+      "inhalt": [
+        "Kontrollabfrage durch Bernd, danach Anwendung der Datenbankänderung für Rollen und Einladung.",
+        "Oberfläche zum Einladen (S1b).",
+        "Zugriffsregeln (S3) nach Bestätigung durch Dieter."
+      ]
+    }
+  ]
+}
