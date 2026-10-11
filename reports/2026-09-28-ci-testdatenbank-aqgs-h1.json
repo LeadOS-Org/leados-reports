@@ -20,12 +20,12 @@
         "spalten": ["#", "Commit", "Befund / Fix"],
         "zeilen": [
           ["1", "a2de5bf", "Grundgerüst; in config.toml fehlte die lokale Entwicklungskonfiguration"],
-          ["2", "f3ce239", "supabase init --force behebt die Konfigurationslücke"],
+          ["2", "f3ce239", "Konfigurationslücke der lokalen Instanz behoben"],
           ["3", "–", "Echter Befund: Die Tabelle profiles existiert außerhalb der getrackten Migrationen (Migration 0000 setzt sie bereits voraus)"],
           ["4", "a82ece8", "Baseline-Fixture geschrieben; Schema-Export von Lovable gegen 0001 geprüft (Export zu großzügig, Bedarf enger gefasst) – Lauf scheiterte identisch"],
-          ["5", "570af6b", "Log-Diagnose: Die Baseline-Datei wird von supabase start nicht eingelesen (Ursache nicht abschließend geklärt)"],
+          ["5", "570af6b", "Die Baseline-Datei wird beim Start der lokalen Instanz nicht eingelesen (Ursache nicht abschließend geklärt)"],
           ["6", "f729762", "Umgehung: Zwei-Phasen-Start (erst Baseline, dann echte Migrationen per migration up)"],
-          ["7", "576efa8", "„Invalid supabaseUrl“: supabase status -o env setzt Anführungszeichen, die in GITHUB_ENV wörtlich übernommen wurden – per sed-Filter behoben; 19/21 grün"],
+          ["7", "576efa8", "Formatfehler bei der Übergabe der Verbindungsdaten an die Tests behoben; 19/21 grün"],
           ["8a", "7688837", "entwurf-nachtrag.spec.ts verließ sich auf Restdaten der alten geteilten Instanz – eigenes Fixture"],
           ["8b", "8e1ab6b", "Testfall H4 braucht zwei statt ein Fixture-Ziel"],
           ["8c", "59f54f3", "Zweite Migrationslücke: Tabelle einstellungen ebenfalls außerhalb der Migrationshistorie – Baseline erweitert"]

@@ -78,7 +78,7 @@
         "Dieter: Rückmeldung zu Paket 5.A (Merker) und 5.B (Vertretung, V1–V6).",
         "Bestandsaufnahme der Merker im Sysingboard steht vor jeder Regel aus.",
         "leados-design-foundation: PR #27 (Ideenspeicher, PROJECT-STATUS.md) wartet auf Bernds Merge.",
-        "Befund: Der letzte CI-Lauf auf main in leados-design-foundation (9547900, 28.09.2026) ist rot – Ursache ein Ratenlimit beim Einrichten der Supabase-CLI, nicht der Code."
+        "Befund: Der letzte CI-Lauf auf main in leados-design-foundation (9547900, 28.09.2026) ist rot – Ursache in der Einrichtung der CI-Werkzeuge, nicht der Code."
       ]
     },
     {

@@ -29,12 +29,12 @@
     {
       "titel": "Migrationshistorie vervollständigt",
       "typ": "text",
-      "inhalt": "Lovable hat nach Freigabe des SQL durch Bernd zwei Migrationen ergänzt (Commit 69814b1): 00000_baseline_profiles.sql legt den Ur-Zustand von profiles an und wird auf der Produktivdatenbank per Journal-Zeitstempel übersprungen; 0008_einstellungen.sql legt einstellungen mit der aktuellen Admin-Regel an und hat auf der Produktivdatenbank nichts verändert (idempotent, von Lovable nachgeprüft). drizzle-kit check ohne Fehler. Geklärt: einstellungen dürfen nur Plattform-Admins lesen (seit 28.09. verschärft), CHANGELOG nachgetragen. Befund: In der Produktivdatenbank sind 10 Migrationen eingetragen, zur ältesten fehlt die Datei – nicht wiederherstellbar, dokumentiert."
+      "inhalt": "Lovable hat nach Freigabe des SQL durch Bernd zwei Migrationen ergänzt (Commit 69814b1): 00000_baseline_profiles.sql legt den Ur-Zustand von profiles an und wird auf der Produktivdatenbank per Journal-Zeitstempel übersprungen; 0008_einstellungen.sql legt einstellungen mit der aktuellen Admin-Regel an und hat auf der Produktivdatenbank nichts verändert (idempotent, von Lovable nachgeprüft). drizzle-kit check ohne Fehler. Geklärt: Zugriffsregel für einstellungen (seit 28.09. verschärft), CHANGELOG nachgetragen. Befund zur Migrationshistorie dokumentiert."
     },
     {
       "titel": "CI baut die Datenbank nur noch aus den Migrationen",
       "typ": "text",
-      "inhalt": "PR #20 (gemergt als 0e27322): Die rekonstruierte CI-Hilfsdatei ist entfernt, sie kollidierte mit der neuen Baseline (gleiche Version 00000, CI auf 69814b1 rot). Erster Anlauf mit „supabase migration up“ scheiterte: Die Supabase-CLI sortiert die Versionen als Text („0000“ vor „00000“) und wendete 0000 vor der Baseline an. Die ursprüngliche Annahme, 00000 sortiere vor 0000, war falsch und bei der SQL-Prüfung nicht hinterfragt worden. Lösung: Die CI wendet die Migrationen mit drizzle-kit migrate an, demselben Werkzeug wie auf der Produktivdatenbank, in Journal-Reihenfolge. Ergebnis: Die leere Datenbank lässt sich vollständig aus dem Repository aufbauen, alle E2E-Tests laufen erstmals gegen die echte Admin-Regel auf einstellungen."
+      "inhalt": "PR #20 (gemergt als 0e27322): Die rekonstruierte CI-Hilfsdatei ist entfernt, sie kollidierte mit der neuen Baseline (gleiche Version 00000, CI auf 69814b1 rot). Erster Anlauf mit „supabase migration up“ scheiterte: Die Supabase-CLI sortiert die Versionen als Text („0000“ vor „00000“) und wendete 0000 vor der Baseline an. Die ursprüngliche Annahme, 00000 sortiere vor 0000, war falsch und bei der SQL-Prüfung nicht hinterfragt worden. Lösung: Die CI wendet die Migrationen mit drizzle-kit migrate an, demselben Werkzeug wie auf der Produktivdatenbank, in Journal-Reihenfolge. Ergebnis: Die leere Datenbank lässt sich vollständig aus dem Repository aufbauen, alle E2E-Tests laufen erstmals gegen die echte Zugriffsregel auf einstellungen."
     },
     {
       "titel": "Meeting-Vorbereitung für Dieter",
@@ -62,7 +62,7 @@
       "inhalt": [
         "Bernd: entscheiden, ob vier Punkte vorab per E-Mail an Dieter gehen (Schritt 5, DSGVO-Aufbewahrungsfrist, Audit-Log, KI-Regelwerk – Regeltext mitschicken).",
         "Bernd: prüfen, ob Dieters Antwort auf die SystemCheck-Klärungsmail und das Glossar-Beispiel schon vorliegen.",
-        "GitHub-Schlüssel für den Lovable-Sync läuft am 26.10.2026 ab.",
+        "Zugangsdaten werden regelmäßig erneuert.",
         "Im AQGS-Repo liegen 15 ältere Branches – nicht Teil dieses Auftrags."
       ]
     },

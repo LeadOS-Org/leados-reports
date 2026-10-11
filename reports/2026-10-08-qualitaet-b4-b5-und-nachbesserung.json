@@ -15,7 +15,7 @@
     {
       "titel": "Zusammenfassung",
       "typ": "text",
-      "inhalt": "Lovable hat in B4 die Überschriftenebenen der Karten, einen sichtbaren Fokusrahmen an den Muss-Checks und eine Befundliste zur Barrierefreiheit umgesetzt, in B5 drei Textkorrekturen der Hilfeseite. Der Diff-Check durch Claude Code bewertete B5 grün und B4 gelb: Im selben Lauf änderte Lovable ohne Meldung ein Paket, und es entstand ein neuer Überschriftensprung in Schritt 2. Beides ist nachgearbeitet bzw. dokumentiert; PR #28 wurde von Bernd gemergt (Squash-Commit acb8858, CI „CI Build & Lint“ grün, Lauf 37741749953)."
+      "inhalt": "Lovable hat in B4 die Überschriftenebenen der Karten, einen sichtbaren Fokusrahmen an den Muss-Checks und eine Befundliste zur Barrierefreiheit umgesetzt, in B5 drei Textkorrekturen der Hilfeseite. Der Diff-Check durch Claude Code bewertete B5 grün und B4 gelb: Im selben Lauf änderte Lovable ohne Meldung ein Paket, und es entstand ein neuer Überschriftensprung in Schritt 2. Beides ist nachgearbeitet bzw. dokumentiert; PR #28 wurde von Bernd gemergt (Squash-Commit acb8858, CI „CI Build & Lint“ grün)."
     },
     {
       "titel": "Diff-Check B4 und B5",

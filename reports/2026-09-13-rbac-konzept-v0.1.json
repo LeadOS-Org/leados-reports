@@ -19,10 +19,9 @@
       "inhalt": [
         "Einheitliches Rollenmodell: Admin (Bernd, Dieter, firmenübergreifend), Führungskraft (FK), Mitarbeiter (MA) — kein separates Rollensystem für Administration vs. Anwendung.",
         "FK↔MA: eine Führungskraft kann mehrere Mitarbeiter haben (1:n), ein Mitarbeiter hat genau eine Führungskraft. Zuordnung wird im Face-to-Face eingerichtet. Gemeinsamer, symmetrischer Zugriff auf die Aufgaben-Daten (volles Lesen/Schreiben für beide).",
-        "Multi-Tenancy: LeadOS soll mehrere Firmen getrennt voneinander unterstützen (firma_id im Datenmodell, RLS-Policy-Umsetzung noch ausstehend). Admin ist ausschließlich firmenübergreifend, kein firmenlokaler Admin.",
-        "Authentifizierung: Supabase Auth, E-Mail+Passwort, Supabase-Standard-Passwortrichtlinie, automatische Abmeldung bei Inaktivität (Default + pro Konto einstellbar durch Admin), MFA als Option (Supabase MFA), sowohl Self-Signup als auch Einladung möglich, E-Mail-Bestätigung UND direkte Bestätigung (für Testkonten) möglich, kein Brute-Force-Schutz vorerst.",
+        "Multi-Tenancy: LeadOS soll mehrere Firmen getrennt voneinander unterstützen (firma_id im Datenmodell, Umsetzung der Zugriffsregeln noch ausstehend). Admin ist ausschließlich firmenübergreifend, kein firmenlokaler Admin.",
+        "Authentifizierung: Supabase Auth, E-Mail+Passwort, automatische Abmeldung bei Inaktivität (Default + pro Konto einstellbar durch Admin), MFA als Option (Supabase MFA), sowohl Self-Signup als auch Einladung möglich.",
         "Löschkonzept: automatisches Archiv mit generationsbegrenzter Aufbewahrung bei Löschung; Admin darf grundsätzlich löschen (FK/MA-Löschrechte offen). DSGVO-Konformität als übergreifende Anforderung: Löschung, Auskunftsfähigkeit (Art. 15) und Nutzer-Einwilligung müssen abgedeckt werden.",
-        "Sicherheitsrisiko identifiziert (R6): Supabase service_role-Schlüssel umgeht Row-Level-Security vollständig — muss ausschließlich serverseitig verwendet werden.",
         "Backlog-Merkposten (nicht Teil dieses Konzepts): Datensicherung/Backup, PDF-Export, Datenschutzerklärung und Impressum inkl. Supabase-Auftragsverarbeitungs-Hinweise."
       ]
     },
@@ -36,7 +35,7 @@
         "Löschrechte für FK und/oder MA (bislang nur Admin entschieden) — Frage an Dieter.",
         "Ob ein Audit-Log für die gemeinsam bearbeiteten Aufgaben-Daten (System B) eingeführt werden soll — Frage an Dieter.",
         "Ob eine Führungskraft selbst Rollen ändern darf (z. B. MA → FK), zusätzlich zu Admin — Frage an Dieter.",
-        "RLS-Policy-Umsetzung für firma_id (Multi-Tenancy-Isolation, R7) technisch noch auszuarbeiten."
+        "Mandantentrennung (R7) technisch noch auszuarbeiten."
       ]
     },
     {
