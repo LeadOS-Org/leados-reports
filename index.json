@@ -2,6 +2,13 @@
   "$schema": "./schema/index.schema.json",
   "reports": [
     {
+      "id": "2026-10-10-profil-startseite-git-hygiene",
+      "typ": "Tagesbericht",
+      "datum": "2026-10-10",
+      "titel": "Profilseite und Startseite fertig; automatische Prüfung wieder grün; Rollen und Einladung vorbereitet; GitHub aufgeräumt",
+      "pfad": "reports/2026-10-10-profil-startseite-git-hygiene.json"
+    },
+    {
       "id": "2026-10-09-dieter-treffen-teil-1-b6-p0",
       "typ": "Tagesbericht",
       "datum": "2026-10-09",
