@@ -11,15 +11,15 @@
     {
       "titel": "Zusammenfassung",
       "typ": "text",
-      "inhalt": "Sechs-Sprint-Plan, der die vollständige Datenpersistenz für den Fünf-Schritte-Ablauf und das RBAC-Konzept (Rollen, RLS, DSGVO, Komfort, Multi-Tenancy) in eine geordnete, verzahnte Reihenfolge bringt, inklusive grobem Lovable-Prompt-Scope pro Sprint."
+      "inhalt": "Sechs-Sprint-Plan, der die vollständige Datenpersistenz für den Fünf-Schritte-Ablauf und das RBAC-Konzept (Rollen, Zugriffsregeln, DSGVO, Komfort, Multi-Tenancy) in eine geordnete, verzahnte Reihenfolge bringt, inklusive grobem Lovable-Prompt-Scope pro Sprint."
     },
     {
       "titel": "Befunde",
       "typ": "liste",
       "inhalt": [
-        "Sprint 1 - Auth-Fundament: Supabase Auth, users/firmen-Tabellen, Admin-Rollen für Bernd/Dieter.",
+        "Sprint 1 - Auth-Fundament: Supabase Auth, users/firmen-Tabellen, Admin-Rollen.",
         "Sprint 2 - Datenmodell fünf Schritte: vollständige Migration von sessionStorage auf Supabase für alle Inhalte (Ziel/Aufgabe/Verantwortung/Kompetenzen/Konsequenzen, SystemCheck Teil 1+2, MA-Sicht Schritt 3, Schritt 4/5).",
-        "Sprint 3 - RLS-Zugriffsschutz: Policies für MA-Eigensicht, FK-Aggregatsicht, firma_id-Isolation (R7), service_role nur serverseitig (R6). Bewusst eng mit Sprint 2 verzahnt, um keine ungeschützte Datenperiode entstehen zu lassen.",
+        "Sprint 3 - Zugriffsschutz: Zugriffsregeln je Rolle und Mandantentrennung (R7). Bewusst eng mit Sprint 2 verzahnt, um keine ungeschützte Datenperiode entstehen zu lassen.",
         "Sprint 4 - DSGVO-Mechanik: Archiv mit generationsbegrenzter Aufbewahrung, Auskunftsfunktion (Art. 15 DSGVO), Einwilligungsmechanismus bei Registrierung.",
         "Sprint 5 - Komfort und Sicherheit: MFA optional (Supabase MFA), Session-Timeout (Default + pro Konto).",
         "Sprint 6 - Multi-Tenancy-Härtung: Firmen-Onboarding-Flow, Isolationstest mit zwei Testfirmen, optionales Audit-Log.",

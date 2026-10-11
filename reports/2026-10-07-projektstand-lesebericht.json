@@ -21,9 +21,9 @@
       "typ": "liste",
       "inhalt": [
         "Formatierungsfehler der Hilfeseite sind behoben (vorher 12, jetzt 0).",
-        "Vorhanden: Datenbanktabellen für Ziel und Aufgabe, Entwürfe, Trennung nach Mandant, Anmeldung, Admin-Kennzeichen. Es fehlen: Zugriffsregeln nach Rolle, Datenschutz-Mechanik, MFA, Sitzungs-Zeitlimit.",
+        "Vorhanden: Datenbanktabellen für Ziel und Aufgabe, Entwürfe, Trennung nach Mandant, Anmeldung. Es fehlen: Zugriffsregeln nach Rolle, Datenschutz-Mechanik, MFA, Sitzungs-Zeitlimit.",
         "Rollen: Das RBAC-Konzept setzt Unternehmer und Führungskraft gleich (drei Rollen), das Architekturkonzept Track C trennt sie (vier Rollen); die Datenbank kennt die drei Rollenwerte nach Track C.",
-        "Der GitHub-Schlüssel mit Ablauf 26.10. betrifft den Sync-Abgleich im Systemstatus, nicht den Lovable-Sync (der läuft über die GitHub-App).",
+        "Zugangsdaten für den Abgleich im Systemstatus werden regelmäßig erneuert; der Lovable-Sync läuft über die GitHub-App.",
         "Lovable ist von der Pull-Request-Pflicht ausgenommen (Entscheidung D-012).",
         "DECISIONS.md, CHANGELOG.md, BACKLOG.md und PROJECT-STATUS.md hängen hinterher (Hilfeseite, Paketaktualisierung, Verhältnis von D-009 zu ADR-0007)."
       ]
