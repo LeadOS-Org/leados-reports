@@ -2,6 +2,13 @@
   "$schema": "./schema/index.schema.json",
   "reports": [
     {
+      "id": "2026-10-13-planung-im-git-aufbewahrung-sitzung-vorbereitet",
+      "typ": "Tagesbericht",
+      "datum": "2026-10-13",
+      "titel": "Planung, Entscheidungen und Risiken im Repository; Aufbewahrung der Fehlermeldungen 30 Tage; Sitzung mit Dieter vorbereitet",
+      "pfad": "reports/2026-10-13-planung-im-git-aufbewahrung-sitzung-vorbereitet.json"
+    },
+    {
       "id": "2026-10-12-haertung-testtrennung-schema-inventur",
       "typ": "Tagesbericht",
       "datum": "2026-10-12",

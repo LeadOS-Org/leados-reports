@@ -1,0 +1,84 @@
+{
+  "id": "2026-10-13-planung-im-git-aufbewahrung-sitzung-vorbereitet",
+  "typ": "Tagesbericht",
+  "datum": "2026-10-13",
+  "titel": "Planung, Entscheidungen und Risiken im Repository; Aufbewahrung der Fehlermeldungen 30 Tage; Sitzung mit Dieter vorbereitet",
+  "meta": {
+    "teilnehmer": [
+      "Bernd (Entscheidungen, Freigaben, Übernahme der Änderungen)",
+      "Lovable (Umsetzung in der App, Anwendung der Datenbankänderungen)",
+      "Claude Code (Prüfungen, Änderungen per Pull Request)"
+    ],
+    "anlass": "Arbeitstag Di 13.10.2026. Diese Fassung enthält nur Ergebnisse und Stand; die vollständige Fassung ist intern (Entscheidung E-27)."
+  },
+  "abschnitte": [
+    {
+      "titel": "Ergebnis in fünf Zeilen",
+      "typ": "liste",
+      "inhalt": [
+        "Die Planung wird jetzt im Repository geführt: Sprintplan mit Status und Abhängigkeiten, alle Entscheidungen (bis D-036) und ein Risikoregister.",
+        "Fehlermeldungen der App werden nur noch 30 Tage aufbewahrt (Entscheidung D-036); die Änderung ist in der Produktion angewendet und geprüft.",
+        "Eine automatische Prüfung erkennt jetzt, wenn bei Datenbankänderungen Zusatzdateien der Entwicklungsplattform liegen bleiben; sie hat am selben Tag einen kleinen Fehler gefunden, der sofort behoben wurde.",
+        "Für die Sitzung mit Dieter sind fünf Entscheidungen vorbereitet (D-031 bis D-035), darunter der Pilotzeitraum: Die acht Wochen sollen mit der Freigabe „pilotreif“ beginnen. Zwei davon bestätigt Dieter in der Sitzung.",
+        "Dieter hat alle Unterlagen für die Sitzung am Mittwoch, 14.10.2026, um 19:00 Uhr; die Demonstration mit erfundenen Daten ist getestet."
+      ]
+    },
+    {
+      "titel": "Stand je Arbeitspaket",
+      "typ": "tabelle",
+      "inhalt": {
+        "spalten": [
+          "Arbeitspaket",
+          "Stand"
+        ],
+        "zeilen": [
+          [
+            "Sprintplan im Repository",
+            "erledigt"
+          ],
+          [
+            "Entscheidungen und Risikoregister im Repository",
+            "erledigt"
+          ],
+          [
+            "Aufbewahrung Fehlermeldungen 30 Tage (D-036)",
+            "erledigt, in der Produktion geprüft"
+          ],
+          [
+            "Prüfung auf liegengebliebene Zusatzdateien",
+            "erledigt"
+          ],
+          [
+            "Aufräumen Startseite und Status (A1), Abgleich der Datenbank (A3)",
+            "erledigt"
+          ],
+          [
+            "Einladungen: Regeln und Verwaltung (S1b-1)",
+            "vorbereitet, Start nach der Sitzung"
+          ],
+          [
+            "Zugriffsregeln und Rollen (S3)",
+            "wartet auf Entscheidungen von Dieter (T-1, T-2)"
+          ],
+          [
+            "Pilotzeitraum (D-031) und Freigabe/Vertretung (D-035)",
+            "Bestätigung durch Dieter am 14.10.2026 offen"
+          ],
+          [
+            "Sitzung mit Dieter",
+            "Mittwoch 14.10.2026, 19:00 Uhr, vorbereitet"
+          ]
+        ]
+      }
+    },
+    {
+      "titel": "Nächste Termine",
+      "typ": "liste",
+      "inhalt": [
+        "Di 13.10., 18:00: Stand der Demonstration eingefroren.",
+        "Mi 14.10., 19:00 Uhr: Sitzung mit Dieter.",
+        "Danach: Protokoll, aktualisierter Plan und neue Aufwandsschätzung; Start der Einladungs-Regeln (S1b-1)."
+      ]
+    }
+  ]
+}
