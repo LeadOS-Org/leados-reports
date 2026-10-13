@@ -9,6 +9,13 @@
       "pfad": "reports/2026-10-12-haertung-testtrennung-schema-inventur.json"
     },
     {
+      "id": "2026-10-11-s1a-angewendet-regel-migrationen-berichte-getrennt",
+      "typ": "Tagesbericht",
+      "datum": "2026-10-11",
+      "titel": "Rollen und Einladungen in der Datenbank angewendet; Regel für Datenbankänderungen entschieden; öffentliche und interne Berichte getrennt",
+      "pfad": "reports/2026-10-11-s1a-angewendet-regel-migrationen-berichte-getrennt.json"
+    },
+    {
       "id": "2026-10-10-profil-startseite-git-hygiene",
       "typ": "Tagesbericht",
       "datum": "2026-10-10",
