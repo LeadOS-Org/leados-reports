@@ -1,0 +1,93 @@
+{
+  "id": "2026-10-11-s1a-angewendet-regel-migrationen-berichte-getrennt",
+  "typ": "Tagesbericht",
+  "datum": "2026-10-11",
+  "titel": "Rollen und Einladungen in der Datenbank angewendet; Regel für Datenbankänderungen entschieden; öffentliche und interne Berichte getrennt",
+  "meta": {
+    "teilnehmer": [
+      "Bernd (Entscheidungen, Freigaben, Übernahme der Änderungen)",
+      "Lovable (Umsetzung in der App, Anwendung der Datenbankänderungen)",
+      "Claude Code (Prüfungen, Änderungen per Pull Request)"
+    ],
+    "anlass": "Arbeitstag So 11.10.2026, nachträglich erstellt am 13.10.2026. Diese Fassung enthält nur Ergebnisse und Stand; die vollständigen Angaben stehen in internen Berichten (Entscheidung E-27)."
+  },
+  "abschnitte": [
+    {
+      "titel": "Ergebnis in fünf Zeilen",
+      "typ": "liste",
+      "inhalt": [
+        "Die Datenbankänderung für Rollen und Einladungen (S1a) ist in der Produktion angewendet. Die Kontrollen vorher und nachher sind bestanden, die Prüfung der Änderung ist grün.",
+        "Die Regel für Datenbankänderungen ist entschieden (Entscheidung D-023): Änderungen entstehen nur als Datei per Pull Request, mit automatischer Prüfung und Freigabe durch Bernd. Die Entwicklungsplattform wendet nur an, was freigegeben ist.",
+        "Eine Datenbankänderung vom 10.10. (Kennzahlen für die Systemstatus-Seite) ist geprüft und nachträglich freigegeben.",
+        "Die Berichte sind in eine öffentliche und eine interne Fassung getrennt (Entscheidung E-27); die öffentlichen Berichte in diesem Repository sind bereinigt.",
+        "Der Umsetzungsplan (Fassung 0.3) und eine erste Aufwandsschätzung liegen als Entwurf im Repository; die Unterlagen für Dieter sind vorbereitet."
+      ]
+    },
+    {
+      "titel": "Stand je Arbeitspaket",
+      "typ": "tabelle",
+      "inhalt": {
+        "spalten": [
+          "Arbeitspaket",
+          "Stand"
+        ],
+        "zeilen": [
+          [
+            "Rollen und Einladungen, Datenbank (S1a)",
+            "angewendet und geprüft"
+          ],
+          [
+            "Regel für Datenbankänderungen (D-023)",
+            "entschieden"
+          ],
+          [
+            "Kennzahlen Systemstatus (Datenbankänderung vom 10.10.)",
+            "nachträglich freigegeben"
+          ],
+          [
+            "Öffentliche und interne Berichte (E-27)",
+            "getrennt, öffentliche Berichte bereinigt"
+          ],
+          [
+            "Änderungsprotokoll und Projektstatus",
+            "aktualisiert"
+          ],
+          [
+            "Umsetzungsplan 0.3 und Aufwandsschätzung",
+            "als Entwurf im Repository"
+          ],
+          [
+            "Einladungen: Regeln und Verwaltung (S1b-1)",
+            "Konzept und Arbeitsauftrag als Entwurf"
+          ],
+          [
+            "Golden Gate (Freigabeschranke vor dem Pilotbetrieb)",
+            "als Vorschlag in Arbeit"
+          ],
+          [
+            "Unterlagen für Dieter (Wegweiser, Umsetzungsplan)",
+            "vorbereitet"
+          ]
+        ]
+      }
+    },
+    {
+      "titel": "Offene Entscheidungen (Stand 11.10.)",
+      "typ": "liste",
+      "inhalt": [
+        "Wie Einladungen versendet und angenommen werden (zwei Varianten zur Auswahl).",
+        "Definition des Golden Gate als Freigabeschranke.",
+        "Antworten von Dieter zu Teil 2 (Frist Mi 14.10.2026), darunter „sein Team“ und „eigene Einträge“ als Voraussetzung für die Zugriffsregeln."
+      ]
+    },
+    {
+      "titel": "Nächste Schritte (Stand 11.10.)",
+      "typ": "liste",
+      "inhalt": [
+        "Prüfung der Produktionsdatenbank gegen die Migrationsdateien (Schema-Inventur).",
+        "Einladungen: Regeln und Verwaltung (S1b-1) nach den nötigen Entscheidungen.",
+        "Sitzung mit Dieter am Mittwoch, 14.10.2026."
+      ]
+    }
+  ]
+}
