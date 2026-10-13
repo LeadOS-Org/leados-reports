@@ -2,6 +2,13 @@
   "$schema": "./schema/index.schema.json",
   "reports": [
     {
+      "id": "2026-10-12-haertung-testtrennung-schema-inventur",
+      "typ": "Tagesbericht",
+      "datum": "2026-10-12",
+      "titel": "Datenbank gehärtet; Testumgebung von der Produktion getrennt; Schema-Inventur abgeschlossen; Sitzung mit Dieter vorbereitet",
+      "pfad": "reports/2026-10-12-haertung-testtrennung-schema-inventur.json"
+    },
+    {
       "id": "2026-10-10-profil-startseite-git-hygiene",
       "typ": "Tagesbericht",
       "datum": "2026-10-10",
