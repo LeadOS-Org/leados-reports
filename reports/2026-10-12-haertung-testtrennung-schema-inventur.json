@@ -1,0 +1,76 @@
+{
+  "id": "2026-10-12-haertung-testtrennung-schema-inventur",
+  "typ": "Tagesbericht",
+  "datum": "2026-10-12",
+  "titel": "Datenbank gehärtet; Testumgebung von der Produktion getrennt; Schema-Inventur abgeschlossen; Sitzung mit Dieter vorbereitet",
+  "meta": {
+    "teilnehmer": [
+      "Bernd (Entscheidungen, Freigaben, Übernahme der Änderungen)",
+      "Lovable (Umsetzung in der App, Anwendung der Datenbankänderungen)",
+      "Claude Code (Prüfungen, Änderungen per Pull Request)"
+    ],
+    "anlass": "Arbeitstag Mo 12.10.2026. Diese Fassung enthält nur Ergebnisse und Stand; die vollständige Fassung ist intern (Entscheidung E-27)."
+  },
+  "abschnitte": [
+    {
+      "titel": "Ergebnis in fünf Zeilen",
+      "typ": "liste",
+      "inhalt": [
+        "Die Datenbank-Zugriffsrechte und Eingabegrenzen sind gehärtet (Entscheidung D-027, PR #55) und in der Produktion angewendet und geprüft.",
+        "Die Testumgebung ist von der Produktion getrennt (Entscheidung D-028): Automatische Tests laufen in einer lokalen Umgebung.",
+        "Die Prüfung der Datenbank gegen die Migrationsdateien (Schema-Inventur) ist abgeschlossen.",
+        "Die Konzepte für Einladungen sind entschieden (Entscheidungen D-024 und D-025); die Umsetzung folgt nach der nächsten Sitzung mit Dieter.",
+        "Die Sitzung mit Dieter am Mittwoch, 14.10.2026, um 19:00 Uhr ist vorbereitet (Leitfaden, Entscheidungsvorlagen, Protokollvorlage)."
+      ]
+    },
+    {
+      "titel": "Stand je Arbeitspaket",
+      "typ": "tabelle",
+      "inhalt": {
+        "spalten": [
+          "Arbeitspaket",
+          "Stand"
+        ],
+        "zeilen": [
+          [
+            "Datenbank-Härtung Stufe 1 (D-027)",
+            "erledigt, in der Produktion geprüft"
+          ],
+          [
+            "Testtrennung (D-028)",
+            "erledigt"
+          ],
+          [
+            "Schema-Inventur gegen Migrationen",
+            "erledigt"
+          ],
+          [
+            "Einladungen: Regeln und Verwaltung (S1b-1)",
+            "vorbereitet, Start nach der Sitzung"
+          ],
+          [
+            "Einladungen: Versand und Annahme, Oberfläche (S1b-2, S1b-3)",
+            "wartet auf Entscheidungen von Dieter"
+          ],
+          [
+            "Zugriffsregeln und Rollen (S3)",
+            "wartet auf Entscheidungen von Dieter (T-1, T-2)"
+          ],
+          [
+            "Sitzung mit Dieter",
+            "Mittwoch 14.10.2026, 19:00 Uhr, vorbereitet"
+          ]
+        ]
+      }
+    },
+    {
+      "titel": "Nächste Termine",
+      "typ": "liste",
+      "inhalt": [
+        "Di 13.10.: Vorbereitung der Sitzung, Probelauf der Demonstration mit erfundenen Daten.",
+        "Mi 14.10., 19:00 Uhr: Sitzung mit Dieter.",
+        "Danach: Protokoll, aktualisierter Plan und neue Aufwandsschätzung."
+      ]
+    }
+  ]
+}
