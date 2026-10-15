@@ -19,21 +19,21 @@
       "id": "2026-10-13-planung-im-git-aufbewahrung-sitzung-vorbereitet",
       "typ": "Tagesbericht",
       "datum": "2026-10-13",
-      "titel": "Planung, Entscheidungen und Risiken im Repository; Aufbewahrung der Fehlermeldungen 30 Tage; Sitzung mit Dieter vorbereitet",
+      "titel": "Planung, Entscheidungen und Risiken im Repository; Fehlermeldungen 30 Tage aufbewahrt; Sitzung mit Dieter vorbereitet",
       "pfad": "reports/2026-10-13-planung-im-git-aufbewahrung-sitzung-vorbereitet.json"
     },
     {
       "id": "2026-10-12-haertung-testtrennung-schema-inventur",
       "typ": "Tagesbericht",
       "datum": "2026-10-12",
-      "titel": "Datenbank gehärtet; Testumgebung von der Produktion getrennt; Schema-Inventur abgeschlossen; Sitzung mit Dieter vorbereitet",
+      "titel": "Datenbank gehärtet; Tests von der Produktion getrennt; Schema-Inventur abgeschlossen; Sitzung mit Dieter vorbereitet",
       "pfad": "reports/2026-10-12-haertung-testtrennung-schema-inventur.json"
     },
     {
       "id": "2026-10-11-s1a-angewendet-regel-migrationen-berichte-getrennt",
       "typ": "Tagesbericht",
       "datum": "2026-10-11",
-      "titel": "Rollen und Einladungen in der Datenbank angewendet; Regel für Datenbankänderungen entschieden; öffentliche und interne Berichte getrennt",
+      "titel": "Rollen und Einladungen in der Datenbank angewendet; Regel für Datenbankänderungen entschieden; Berichte getrennt",
       "pfad": "reports/2026-10-11-s1a-angewendet-regel-migrationen-berichte-getrennt.json"
     },
     {

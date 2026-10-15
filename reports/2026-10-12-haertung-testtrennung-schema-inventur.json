@@ -2,7 +2,7 @@
   "id": "2026-10-12-haertung-testtrennung-schema-inventur",
   "typ": "Tagesbericht",
   "datum": "2026-10-12",
-  "titel": "Datenbank gehärtet; Testumgebung von der Produktion getrennt; Schema-Inventur abgeschlossen; Sitzung mit Dieter vorbereitet",
+  "titel": "Datenbank gehärtet; Tests von der Produktion getrennt; Schema-Inventur abgeschlossen; Sitzung mit Dieter vorbereitet",
   "meta": {
     "teilnehmer": [
       "Bernd (Entscheidungen, Freigaben, Übernahme der Änderungen)",
