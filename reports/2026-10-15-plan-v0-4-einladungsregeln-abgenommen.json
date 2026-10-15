@@ -1,0 +1,72 @@
+{
+  "id": "2026-10-15-plan-v0-4-einladungsregeln-abgenommen",
+  "typ": "Tagesbericht",
+  "datum": "2026-10-15",
+  "titel": "Plan v0.4 als Arbeitsgrundlage; Regeln und Verwaltung der Einladungen abgenommen; Ladefehler der Anmeldeseite untersucht",
+  "meta": {
+    "teilnehmer": [
+      "Bernd (Entscheidungen, Freigaben, Übernahme der Änderungen)",
+      "Lovable (Umsetzung in der App)",
+      "Claude Code (Prüfungen, Änderungen per Pull Request)"
+    ],
+    "anlass": "Arbeitstag Do 15.10.2026. Diese Fassung enthält nur Ergebnisse und Stand; die vollständige Fassung ist intern (Entscheidung E-27)."
+  },
+  "abschnitte": [
+    {
+      "titel": "Ergebnis in fünf Zeilen",
+      "typ": "liste",
+      "inhalt": [
+        "Plan v0.4 ist die Arbeitsgrundlage (Entscheidung D-039): acht Sprints bis zur Freigabe „pilotreif“ und darüber hinaus; erstes sichtbares Zwischenziel ist die Liste „Unvollständig“ mit erfundenen Daten (Meilenstein M-U). Termine sind Annahmen, keine Zusagen.",
+        "Der erste Baustein von Sprint 1 ist umgesetzt und abgenommen: Regeln und Verwaltung der Einladungen (S1b-1), noch ohne Versand und Oberfläche; die automatische Prüfung ist grün.",
+        "Ein Ladefehler auf der Anmeldeseite und die englische Fehlerseite sind untersucht (A2): Im Programmcode gibt es keine feste Ursache; die Behebung mit einem Lauf (Sprache, deutsche Fehlerseite, bessere Fehlererfassung) ist vorbereitet.",
+        "Dieter hat den Plan und die offenen Fragen per E-Mail erhalten: zwei Fragen bis Montag 19.10.2026, die übrigen zum Termin am 03.11.2026.",
+        "Der Projektstand ist im Repository und auf der Projektseite nachgezogen."
+      ]
+    },
+    {
+      "titel": "Stand je Arbeitspaket",
+      "typ": "tabelle",
+      "inhalt": {
+        "spalten": [
+          "Arbeitspaket",
+          "Stand"
+        ],
+        "zeilen": [
+          [
+            "Plan v0.4 (D-039)",
+            "erledigt"
+          ],
+          [
+            "Einladungen: Regeln und Verwaltung (S1b-1)",
+            "erledigt, abgenommen"
+          ],
+          [
+            "Ladefehler Anmeldeseite, deutsche Fehlerseite (A2)",
+            "untersucht, Behebung vorbereitet"
+          ],
+          [
+            "Einladungen: Versand und Annahme, Oberfläche (S1b-2, S1b-3)",
+            "nach A2"
+          ],
+          [
+            "Zugriffsregeln (S3) und Liste „Unvollständig“",
+            "geplant (Sprints 2 bis 4)"
+          ],
+          [
+            "Fragen an Dieter",
+            "zwei bis 19.10.2026, die übrigen zum 03.11.2026"
+          ]
+        ]
+      }
+    },
+    {
+      "titel": "Nächste Termine",
+      "typ": "liste",
+      "inhalt": [
+        "Behebung A2: ein Lovable-Lauf mit anschließender Prüfung durch Claude Code.",
+        "Mo 19.10.2026: Antworten von Dieter auf zwei Fragen.",
+        "Di 03.11.2026, 10:00 Uhr: Termin mit Dieter für die übrigen Fragen."
+      ]
+    }
+  ]
+}

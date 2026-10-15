@@ -2,6 +2,20 @@
   "$schema": "./schema/index.schema.json",
   "reports": [
     {
+      "id": "2026-10-15-plan-v0-4-einladungsregeln-abgenommen",
+      "typ": "Tagesbericht",
+      "datum": "2026-10-15",
+      "titel": "Plan v0.4 als Arbeitsgrundlage; Regeln und Verwaltung der Einladungen abgenommen; Ladefehler der Anmeldeseite untersucht",
+      "pfad": "reports/2026-10-15-plan-v0-4-einladungsregeln-abgenommen.json"
+    },
+    {
+      "id": "2026-10-14-sitzung-dieter-pilotzeitraum-sichtbarkeit",
+      "typ": "Tagesbericht",
+      "datum": "2026-10-14",
+      "titel": "Sitzung mit Dieter: Pilotzeitraum und Freigaberegel bestätigt, Sichtbarkeit in der Firma festgelegt",
+      "pfad": "reports/2026-10-14-sitzung-dieter-pilotzeitraum-sichtbarkeit.json"
+    },
+    {
       "id": "2026-10-13-planung-im-git-aufbewahrung-sitzung-vorbereitet",
       "typ": "Tagesbericht",
       "datum": "2026-10-13",

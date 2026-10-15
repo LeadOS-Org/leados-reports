@@ -1,0 +1,75 @@
+{
+  "id": "2026-10-14-sitzung-dieter-pilotzeitraum-sichtbarkeit",
+  "typ": "Tagesbericht",
+  "datum": "2026-10-14",
+  "titel": "Sitzung mit Dieter: Pilotzeitraum und Freigaberegel bestätigt, Sichtbarkeit in der Firma festgelegt",
+  "meta": {
+    "teilnehmer": [
+      "Bernd (Entscheidungen, Freigaben, Übernahme der Änderungen)",
+      "Dieter (fachliche Leitung, Sitzung am Abend)",
+      "Claude Code (Prüfungen, Änderungen per Pull Request)"
+    ],
+    "anlass": "Arbeitstag Mi 14.10.2026 mit der zweiten Sitzung mit Dieter. Diese Fassung enthält nur Ergebnisse und Stand; die vollständige Fassung ist intern (Entscheidung E-27)."
+  },
+  "abschnitte": [
+    {
+      "titel": "Ergebnis in fünf Zeilen",
+      "typ": "liste",
+      "inhalt": [
+        "Dieter hat den Pilotzeitraum bestätigt (Entscheidung D-031): Die acht Wochen beginnen mit der Freigabe „pilotreif“; davor wird nur mit erfundenen Testdaten gearbeitet.",
+        "Dieter hat die Freigaberegel bestätigt (Entscheidung D-035): Bernd gibt frei, Dieter bestätigt fachlich und vertritt bei Abwesenheit; die KI entscheidet nie.",
+        "Neu festgelegt (Entscheidung D-038): Innerhalb einer Firma sehen alle alle Einträge, auch Entwürfe; ändern darf nur, wer den Eintrag angelegt hat; Firmen bleiben streng getrennt.",
+        "Die Liste „Unvollständig“ ist bestätigt; zusätzlich gewünscht sind ein Filter nach Mitarbeiter, eine Sortierung und eine eigene Farbe.",
+        "Die Einstellungen der drei GitHub-Repositories sind vereinheitlicht (Entscheidung D-037)."
+      ]
+    },
+    {
+      "titel": "Stand je Arbeitspaket",
+      "typ": "tabelle",
+      "inhalt": {
+        "spalten": [
+          "Arbeitspaket",
+          "Stand"
+        ],
+        "zeilen": [
+          [
+            "Sitzung mit Dieter",
+            "durchgeführt am Mittwoch 14.10.2026"
+          ],
+          [
+            "Pilotzeitraum (D-031) und Freigabe/Vertretung (D-035)",
+            "von Dieter bestätigt"
+          ],
+          [
+            "Sichtbarkeit und Schreibrecht in der Firma (D-038)",
+            "entschieden, Umsetzung mit den Zugriffsregeln (S3)"
+          ],
+          [
+            "Liste „Unvollständig“",
+            "bestätigt; Filter, Sortierung und Farbe neu"
+          ],
+          [
+            "Datenschutz",
+            "teilweise vertagt; bis zur Klärung nur erfundene Testdaten"
+          ],
+          [
+            "Einstellungen der GitHub-Repositories (D-037)",
+            "erledigt"
+          ],
+          [
+            "Einladungen: Regeln und Verwaltung (S1b-1)",
+            "Start nach dem neuen Plan"
+          ]
+        ]
+      }
+    },
+    {
+      "titel": "Nächste Termine",
+      "typ": "liste",
+      "inhalt": [
+        "Do 15.10.: Protokoll, Plan v0.4 und neue Aufwandsschätzung; Start der Einladungs-Regeln (S1b-1).",
+        "Nächstes Treffen mit Dieter: wird später festgelegt."
+      ]
+    }
+  ]
+}
