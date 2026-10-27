@@ -11,7 +11,7 @@
     {
       "titel": "Zusammenfassung",
       "typ": "text",
-      "inhalt": "\"AQDS\" im Auftrag war ein Tippfehler für AQGS (Application Quality Gate Standard, bmarnau-standards/AQGS-Application-Quality-Gate-Standard). Diagnose Teil 1–4 durchgeführt: Die drei aktiven LeadOS-Repos liegen unter der Organisation LeadOS-Org (nicht unter dem persönlichen Account). Gefundene Abweichungen: kein Branch-Schutz auf main in allen drei Repos; alle 5 letzten Commits auf leados-design-foundation/main unsigniert; main dort aktuell CI-rot (11 ESLint/Prettier-Fehler blockieren Lint, wodurch Build und E2E-Tests gar nicht erreicht werden); keine E2E-Tests für G3 (Z-AVKK-Liste) und G5 (KI-Prüfung); ein offener, divergierter PR #1 in leados-arbeitsstand. Die vier Kern-Dokumente in docs/ sind vollständig und aktuell. Die öffentliche Lovable-Preview-URL (leados-design-foundation.lovable.app) zeigt nur die Design-Foundation-Showcase, keine funktionierende Navigation zu Fünf-Schritte-Ablauf oder Z-AVKK-Liste (/zavkk-liste liefert 404) – wirkt veraltet gegenüber dem Repo-Stand. Anschließend auf Bernds Anweisung Entscheidung D-011 dokumentiert: LeadOS referenziert ab sofort alle sechs Standards aus bmarnau-standards (ADG, TDF, AQGS, security-standard, dsgvo-compliance, ai-act-compliance) als ergänzende Grundlage, festgehalten in ADR-0006 (leados-design-foundation) sowie kurzen Verweisen in den READMEs von leados-reports und leados-arbeitsstand."
+      "inhalt": "\"AQDS\" im Auftrag war ein Tippfehler für AQGS (Application Quality Gate Standard, bmarnau-standards/AQGS-Application-Quality-Gate-Standard). Diagnose Teil 1–4 durchgeführt: Die drei aktiven LeadOS-Repos liegen unter der Organisation LeadOS-Org (nicht unter dem persönlichen Account). Gefundene Abweichungen: kein Branch-Schutz auf main in allen drei Repos; alle 5 letzten Commits auf leados-design-foundation/main unsigniert; main dort aktuell CI-rot (11 ESLint/Prettier-Fehler blockieren Lint, wodurch Build und E2E-Tests gar nicht erreicht werden); keine E2E-Tests für G3 (Z-AVKK-Liste) und G5 (KI-Prüfung); ein offener, divergierter PR #1 in leados-arbeitsstand. Die vier Kern-Dokumente in docs/ sind vollständig und aktuell. Die öffentliche Lovable-Preview-URL (die veröffentlichte App, Adresse bei Bernd erhältlich) zeigt nur die Design-Foundation-Showcase, keine funktionierende Navigation zu Fünf-Schritte-Ablauf oder Z-AVKK-Liste (/zavkk-liste liefert 404) – wirkt veraltet gegenüber dem Repo-Stand. Anschließend auf Bernds Anweisung Entscheidung D-011 dokumentiert: LeadOS referenziert ab sofort alle sechs Standards aus bmarnau-standards (ADG, TDF, AQGS, security-standard, dsgvo-compliance, ai-act-compliance) als ergänzende Grundlage, festgehalten in ADR-0006 (leados-design-foundation) sowie kurzen Verweisen in den READMEs von leados-reports und leados-arbeitsstand."
     },
     {
       "titel": "Gefundene Abweichungen (keine automatische Korrektur vorgenommen)",
@@ -47,6 +47,11 @@
       "titel": "Bezüge",
       "typ": "liste",
       "inhalt": ["D-011", "ADR-0006", "AQGS", "G1", "G2", "G3", "G5", "ADR-0002"]
+    },
+    {
+      "titel": "Vermerk",
+      "typ": "text",
+      "inhalt": "Adresse am 27.10.2026 durch Rollenbegriff ersetzt (E-27)."
     }
   ]
 }

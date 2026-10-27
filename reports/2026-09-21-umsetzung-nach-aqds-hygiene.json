@@ -23,7 +23,7 @@
         "Verwaister PR #1 (docs: add README) in leados-arbeitsstand geschlossen, Branch geloescht - Inhalt war durch spaeteren main-Stand ersetzt.",
         "README-Status in leados-design-foundation aktualisiert (PR #13): Fuenf-Schritte-Ablauf vollstaendig klickbar statt '3/5', Sprint-1.5-Stand ergaenzt.",
         "Stand-Zeitstempel in leados-arbeitsstand aktualisiert (PR #3): von 09.09. auf 21.09.2026.",
-        "Lovable-Live-Vorschau (leados-design-foundation.lovable.app) live geprueft: Z-AVKK-Liste und KI-Pruefung funktionieren vollstaendig, KI-Pruefung liefert echte regelkonforme Analyse."
+        "Lovable-Live-Vorschau (die veröffentlichte App, Adresse bei Bernd erhältlich) live geprueft: Z-AVKK-Liste und KI-Pruefung funktionieren vollstaendig, KI-Pruefung liefert echte regelkonforme Analyse."
       ]
     },
     {
@@ -39,6 +39,11 @@
       "titel": "Bezüge",
       "typ": "liste",
       "inhalt": ["2026-09-21-aqds-hygiene-und-standardfamilie", "D-011", "ADR-0006", "G3", "G5", "ADR-0002"]
+    },
+    {
+      "titel": "Vermerk",
+      "typ": "text",
+      "inhalt": "Adresse am 27.10.2026 durch Rollenbegriff ersetzt (E-27)."
     }
   ]
 }
