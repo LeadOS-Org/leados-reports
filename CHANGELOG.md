@@ -1,12 +1,13 @@
 # Changelog
 
-Alle wesentlichen Änderungen an diesem Projekt werden in dieser Datei dokumentiert.
+Alle wesentlichen Änderungen an diesem Repository werden in dieser Datei dokumentiert.
 
-Das Format basiert auf [Keep a Changelog](https://keepachangelog.com/de/1.1.0/),
-und dieses Projekt folgt der [Semantischen Versionierung](https://semver.org/lang/de/).
+Das Format orientiert sich an [Keep a Changelog](https://keepachangelog.com/de/1.1.0/).
+Dieses Repository vergibt keine Versionsnummern; die Einträge sind nach Datum geordnet.
+Frühere Änderungen stehen in der Git-Historie.
 
 ## [Unreleased]
 
-## [0.1.0]
+## 2026-10-31
 
-- Stand vor Einführung dieses Changelogs.
+- `CHANGELOG.md` angelegt.
